@@ -284,6 +284,7 @@
   .plan-switch button.on{background:#fff;color:var(--pine);box-shadow:0 2px 10px rgba(38,42,46,.08)}
   .plan-tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--pine);border-radius:999px;padding:4px 10px;margin:8px 0 8px}
   .plan-tag.sec{background:var(--sand);margin-top:32px}
+  .plan-tag.alt{background:#6f8f82;margin-top:28px}
   .h3s{font-family:var(--serif);font-weight:400;font-size:24px;margin:0 0 12px}
   .glance-alt{margin-top:6px!important;font-size:13px!important}
   details.why{margin:-6px 0 20px}
@@ -537,6 +538,19 @@
     <div class="links" id="spa-links"></div>
     <div class="reco"><strong>Recomendación:</strong> el spa privado para los dos, con cava, fruta y bombones: es nuestro aniversario y lo tenemos para nosotros solos. Si preferimos ahorrar, el circuito normal (80 € los dos). Los masajes en cabina no tienen precio publicado: se consultan al reservar.</div>
 
+    <p class="plan-tag alt">Plan principal · segunda opción</p>
+    <h3 class="h3s">Hotel Hita, Navacerrada</h3>
+    <figure class="photo-banner scroll-photo photo"><img src="img/hita_circuito-1000.webp" srcset="img/hita_circuito-640.webp 640w, img/hita_circuito-1000.webp 1000w" sizes="(max-width:680px) 92vw, 880px" width="1000" height="680" alt="La piscina climatizada del Hotel Hita, con cuello de cisne y grandes ventanales" loading="lazy" decoding="async"><figcaption class="photo-credit">Piscina del circuito termal. Foto: Hotel Hita</figcaption></figure>
+    <p class="sub">Hotel de cuatro estrellas solo para adultos, en el mismo Navacerrada, así que el horario del sábado no cambia. Precios de su web oficial; el horario del spa no está publicado, se confirma al reservar.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Modalidad</th><th>Qué incluye</th><th>Precio</th></tr></thead>
+        <tbody id="spa-rows-hita"></tbody>
+      </table>
+    </div>
+    <div class="links" id="spa-links-hita"></div>
+    <div class="reco"><strong>Cuándo elegirlo:</strong> si Hacienda Los Robles no tiene hueco a las 19:00, o si preferimos algo más corto y barato. Su punto fuerte son las vistas a las montañas y al embalse; ojo, las dos saunas están cada una en un vestuario, así que esa parte no la compartimos.</div>
+
     <p class="plan-tag sec">Plan secundario</p>
     <h3 class="h3s">Spaxión, Áurea Convento Capuchinos (Segovia)</h3>
     <figure class="photo-banner scroll-photo photo"><img src="img/spa_masaje-1280.webp" srcset="img/spa_masaje-640.webp 640w, img/spa_masaje-1280.webp 1280w" sizes="(max-width:680px) 92vw, 880px" width="1280" height="853" alt="La cabina de masaje para dos del spa Spaxión" loading="lazy" decoding="async"><figcaption class="photo-credit">Cabina de masaje en pareja. Foto: Áurea Hotels</figcaption></figure>
@@ -557,7 +571,7 @@
     <p class="plan-tag">Plan principal: El Escorial</p>
     <ol class="check">
       <li><strong>Comida del sábado en San Lorenzo, 13:30.</strong> La Yesca Taberna en <a href="https://www.thefork.es/restaurante/la-yesca-taberna-r860597" target="_blank" rel="noopener">TheFork</a>, la primera, porque los fines de semana se llena. Si no hay sitio: Genara en <a href="https://www.opentable.es/r/genara-san-lorenzo-de-el-escorial?covers=2&dateTime=2026-11-28T13%3A30" target="_blank" rel="noopener">OpenTable</a> o Cantina Virgilio en <a href="https://www.thefork.es/restaurante/cantina-virgilio-r838163" target="_blank" rel="noopener">TheFork</a>.</li>
-      <li><strong>Spa del sábado, de 19:00 a 20:30.</strong> Hacienda Los Robles: línea del spa <a href="tel:+34918535328">91 853 53 28</a>, <a href="https://wa.me/34645514440" target="_blank" rel="noopener">WhatsApp 645 514 440</a> o <a href="mailto:spa@haciendalosrobles.com">spa@haciendalosrobles.com</a>. Pedimos el spa privado para dos.</li>
+      <li><strong>Spa del sábado, de 19:00 a 20:30.</strong> Hacienda Los Robles: línea del spa <a href="tel:+34918535328">91 853 53 28</a>, <a href="https://wa.me/34645514440" target="_blank" rel="noopener">WhatsApp 645 514 440</a> o <a href="mailto:spa@haciendalosrobles.com">spa@haciendalosrobles.com</a>. Pedimos el spa privado para dos. Si no hay hueco: Hotel Hita, <a href="tel:+34918560125">918 56 01 25</a>.</li>
       <li><strong>Cena del sábado, 21:30.</strong> Plaza, en San Rafael: <a href="https://www.thefork.es/restaurante/plaza-r456285" target="_blank" rel="noopener">TheFork</a> o <a href="tel:+34921172031">921 17 20 31</a>. Si no hay mesa, Los Jardines de la Brasería, <a href="tel:+34921171790">921 171 790</a>.</li>
       <li><strong>Avisar al alojamiento</strong> de que haremos el check-in hacia las 21:00: <a href="tel:+34921171412">921 17 14 12</a>.</li>
       <li><strong>Opcional: entrada al monasterio</strong>, si queremos verlo por dentro, en la <a href="https://tickets.patrimonionacional.es/en/tickets/san-lorenzo-del-escorial?city=MAD" target="_blank" rel="noopener">web de Patrimonio Nacional</a>.</li>
@@ -736,6 +750,7 @@ const SAT_SEG = [
 const PARK_ESC = "Estación de autobuses, Calle Juan de Toledo, San Lorenzo de El Escorial";
 const SILLA = "Silla de Felipe II, San Lorenzo de El Escorial";
 const ROBLES = "Hotel Rural Spa & Wellness Hacienda Los Robles, Avenida de Madrid 27, Navacerrada";
+const HITA = "Hotel Hita, Carretera N-607 km 58, Navacerrada";
 const walkRouteEsc = "https://www.google.com/maps/dir/?api=1&origin=" + encodeURIComponent(PARK_ESC) + "&destination=" + encodeURIComponent("Real Coliseo de Carlos III, San Lorenzo de El Escorial") + "&waypoints=" + encodeURIComponent("Lonja del Monasterio de El Escorial") + "&travelmode=walking";
 
 const STOPS_ESC = [
@@ -787,7 +802,10 @@ const SAT_ESC = [
   {time:"19:00", tag:"Spa", photo:{src:"img/robles_piscina.webp", alt:"La piscina dinámica del spa de Hacienda Los Robles, con muros de piedra y vistas al jardín", credit:"Piscina del spa. Foto: Hacienda Los Robles"},
    title:"Spa Hacienda Los Robles, Navacerrada", q:ROBLES, from:SILLA, tel:"91 853 53 28",
    webs:[["Web del spa","https://www.haciendalosrobles.com/spa/"],["WhatsApp del spa","https://wa.me/34645514440"],["Modalidades y precios","#spa"]],
-   desc:"Salimos de la Silla hacia las 18:15: unos 25 minutos hasta Navacerrada. Piscina a 36 °C con chorros, cascada y jacuzzi, sauna finlandesa, baño turco y hamacas con vistas al jardín. El sábado abre de 15:30 a 21:00 y solo con cita previa: reservamos de 19:00 a 20:30. Bañador obligatorio; gorro, chanclas y toalla incluidos. Los bañadores, en una mochila a mano, no en el fondo de la maleta."},
+   desc:"Salimos de la Silla hacia las 18:15: unos 25 minutos hasta Navacerrada. Piscina a 36 °C con chorros, cascada y jacuzzi, sauna finlandesa, baño turco y hamacas con vistas al jardín. El sábado abre de 15:30 a 21:00 y solo con cita previa: reservamos de 19:00 a 20:30. Bañador obligatorio; gorro, chanclas y toalla incluidos. Los bañadores, en una mochila a mano, no en el fondo de la maleta.",
+   extra:`<div class="box"><div class="box-t">Segunda opción, en el mismo pueblo</div>
+     <p><strong>Hotel Hita</strong>, solo para adultos: circuito termal de 45 minutos con vistas a las montañas y al embalse, a 35 € por persona, y spa en exclusiva bajo consulta. No publica el horario del spa: se confirma al reservar.</p>
+     <div class="links">${mapBtns(HITA, SILLA)}${b("web","https://www.hotelhita.com/wellness/","Web del spa")}${tel("918 56 01 25")}</div></div>`},
   {time:"20:30", tag:"Vuelta", title:"De Navacerrada a San Rafael", q:HOTEL, from:ROBLES, map:false,
    desc:"Unos 30 minutos de carretera, ya de noche. Llegamos hacia las 21:00."},
   {time:"21:00", tag:"Check-in", photo:{src:"img/fachada.webp", alt:"La casa de piedra de Luxury Suites El Encanto del Pinar, entre pinos", credit:"Luxury Suites El Encanto del Pinar. Foto del alojamiento"},
@@ -796,6 +814,11 @@ const SAT_ESC = [
   {...SAT_SEG[SAT_SEG.length - 1], time:"21:30"}
 ];
 
+const SPA_HITA = [
+  {o:"Circuito termal", inc:"45 min: piscina climatizada con vistas a las montañas y al embalse, cuello de cisne, cascada de presión, jacuzzi y dos saunas, una en cada vestuario", p:"35 € por persona (70 € los dos)"},
+  {o:"Spa en uso exclusivo", inc:"El spa solo para nosotros", p:"Precio a consultar"},
+  {o:"Masajes", inc:"Con los terapeutas del hotel", p:"Precio a consultar"}
+];
 const SPA_ESC = [
   {o:"Circuito hidrotermal", inc:"1 h 30 min: piscina dinámica a 36 °C, sauna finlandesa, baño turco, fuente de hielo y ducha de sensaciones. Compartido, con un aforo de 8 a 10 personas", p:"40 € por persona (80 € los dos)"},
   {o:"Spa privado para dos", rec:true, inc:"1 h 30 min con todo el circuito solo para nosotros, copa de cava, brocheta de frutas y bombones", p:"225 € los dos"}
@@ -848,6 +871,8 @@ document.getElementById("seg-route").innerHTML = b("dir", dir(PARK, HOTEL), "Abr
 const spaRow = s => `<tr${s.rec ? ' class="rec"' : ""}><td><strong>${s.o}</strong>${s.rec ? '<span class="pill pill-rec">Nuestra elección</span>' : ""}</td><td data-label="Qué incluye">${s.inc}</td><td class="price" data-label="Precio">${s.p}</td></tr>`;
 document.getElementById("spa-rows").innerHTML = SPA_ESC.map(spaRow).join("");
 document.getElementById("spa-links").innerHTML = b("web","https://www.haciendalosrobles.com/spa/","Web del spa") + mapBtns(ROBLES) + tel("91 853 53 28") + b("web","https://wa.me/34645514440","WhatsApp");
+document.getElementById("spa-rows-hita").innerHTML = SPA_HITA.map(spaRow).join("");
+document.getElementById("spa-links-hita").innerHTML = b("web","https://www.hotelhita.com/wellness/","Web del spa") + mapBtns(HITA) + tel("918 56 01 25") + b("web","mailto:info@hotelhita.com","Correo");
 document.getElementById("spa-rows-seg").innerHTML = SPA.map(s => `<tr${s.rec ? ' class="rec"' : ""}><td><strong>${s.o}</strong>${s.rec ? '<span class="pill pill-rec">Nuestra elección</span>' : ""}</td><td data-label="Qué incluye">${s.inc}</td><td class="price" data-label="Precio">${s.p}</td></tr>`).join("");
 document.getElementById("spa-links-seg").innerHTML = b("web","https://www.eurostarshotels.com/aurea-convento-capuchinos/spa.html","Web del spa") + mapBtns("Spa Spaxión Áurea Convento Capuchinos, Segovia") + tel("921 051 477");
 
