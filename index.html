@@ -234,15 +234,161 @@
     ol.check li{padding:14px 14px 14px 48px}
     .note,.reco{padding:14px}
   }
+
+  /* ---------- Hero y recorrido con scroll (mismo sistema que el viaje de Indonesia) ---------- */
+  html,body{overflow-x:clip}
+  .hero{position:relative;height:100svh;min-height:560px;overflow:hidden;color:#fff;background:#1d1a17;isolation:isolate}
+  .hero-layer{position:absolute;inset:0;will-change:transform;transform-origin:50% 60%}
+  .hero-layer img{width:100%;height:100%;object-fit:cover;object-position:50% 55%;display:block}
+  .hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,16,.35) 0%,rgba(20,18,16,0) 30%,rgba(20,18,16,.15) 55%,rgba(20,18,16,.78) 100%)}
+  .hero-content{position:absolute;left:max(24px,calc((100vw - 920px)/2 + 20px));right:24px;bottom:calc(14svh + env(safe-area-inset-bottom));max-width:760px;will-change:transform,opacity}
+  .hero-kicker{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#f3dfbf;margin:0 0 14px}
+  .hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,7.4vw,92px);line-height:1.02;letter-spacing:-.02em;margin:0 0 16px;color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+  .hero h1 em{font-style:italic;color:#f3dfbf}
+  .hero-lead{font-size:clamp(16px,1.6vw,19px);line-height:1.5;color:rgba(255,255,255,.9);max-width:520px;margin:0 0 20px}
+  .hero-chips{display:flex;flex-wrap:wrap;gap:8px}
+  .hero-chips span{font-size:13px;font-weight:500;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+  .hero-cue{position:absolute;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:2px;color:rgba(255,255,255,.85);text-decoration:none;font-size:11px;letter-spacing:.14em;text-transform:uppercase;animation:cue 2.2s ease-in-out infinite}
+  @keyframes cue{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,6px)}}
+  .photo-credit{font-size:10.5px;color:var(--muted);margin:6px 2px 0;line-height:1.35}
+  .hero-credit{position:absolute;right:16px;top:calc(12px + env(safe-area-inset-top));color:rgba(255,255,255,.6);margin:0;max-width:60vw;text-align:right}
+
+  .journey{display:none}
+  .journey.journey-ready{display:block;position:relative;height:330svh;background:#1d1a17}
+  .journey-stage{position:sticky;top:0;height:100svh;overflow:hidden;isolation:isolate;color:#fff}
+  .journey-window{position:absolute;inset:0;overflow:hidden;clip-path:inset(8% 8% round 28px);background:#2a2520}
+  .journey-scene{position:absolute;inset:0;overflow:hidden;opacity:0;isolation:isolate}
+  .journey-scene:first-child{opacity:1}
+  .journey-scene img{width:100%;height:100%;object-fit:cover;display:block;will-change:transform}
+  .journey-scene::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,16,.38),transparent 38%,rgba(20,18,16,.2) 52%,rgba(20,18,16,.86))}
+  .journey-word{position:absolute;top:15%;left:-3%;z-index:1;font-family:var(--serif);font-size:clamp(110px,22vw,360px);line-height:1;letter-spacing:-.05em;color:rgba(255,255,255,.2);white-space:nowrap;pointer-events:none}
+  .journey-caption{position:absolute;z-index:2;left:max(8vw,calc((100vw - 1080px)/2));right:8vw;bottom:17%}
+  .journey-eyebrow{display:block;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;color:#f3dfbf}
+  .journey-caption h2{color:#fff;font-family:var(--serif);font-weight:400;font-size:clamp(44px,6.5vw,100px);line-height:1.02;margin:0 0 16px;letter-spacing:-.025em}
+  .journey-caption em{color:#f3dfbf}
+  .journey-caption p{color:rgba(255,255,255,.88);font-size:clamp(15px,1.2vw,18px);margin:0;max-width:440px}
+  .journey-topline,.journey-bottomline{position:absolute;z-index:5;left:5%;right:5%;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:12px}
+  .journey-topline{top:calc(28px + env(safe-area-inset-top))}
+  .journey-skip{color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:10px 16px;background:rgba(20,18,16,.4);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+  .journey-bottomline{bottom:calc(56px + env(safe-area-inset-bottom));font-variant-numeric:tabular-nums}
+  .journey-steps{display:flex;width:min(420px,55%);gap:18px}
+  .journey-steps span{flex:1;position:relative;padding-top:12px;color:rgba(255,255,255,.75)}
+  .journey-steps span::before,.journey-steps i{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:rgba(255,255,255,.25)}
+  .journey-steps i{background:#f3dfbf;transform:scaleX(0);transform-origin:left}
+  .journey-credit{position:absolute;z-index:5;left:5%;right:5%;bottom:calc(16px + env(safe-area-inset-bottom));color:rgba(255,255,255,.5);margin:0}
+
+  .intro{padding:40px 0 8px;background:var(--paper);border-bottom:1px solid var(--line)}
+  .intro .eyebrow{margin-bottom:4px}
+  .intro .glance{margin-top:18px;margin-bottom:28px}
+
+  /* Fotos dentro de las tarjetas, con parallax suave */
+  .photo{position:relative;margin:-18px -20px 16px;overflow:hidden;border-radius:16px 16px 0 0;aspect-ratio:16/9;background:var(--paper)}
+  .photo img{position:absolute;left:0;width:100%;height:calc(100% + 56px);top:-28px;object-fit:cover;display:block;transform:translate3d(0,var(--photo-y,0px),0)}
+  .photo .photo-credit{position:absolute;left:0;right:0;bottom:0;margin:0;padding:18px 12px 7px;color:rgba(255,255,255,.88);background:linear-gradient(180deg,transparent,rgba(20,18,16,.55))}
+  .stop .photo{margin:-16px -18px 14px -58px;border-radius:14px 14px 0 0}
+  .card-photo .suite-photo{aspect-ratio:auto;height:260px}
+  .card-photo .suite-photo img{object-position:50% 60%}
+
+  /* Entrada de tarjetas al hacer scroll */
+  .motion-ready .scroll-enter{opacity:var(--enter-opacity,1);translate:0 var(--enter-y,0px);scale:var(--enter-scale,1);transform-origin:50% 100%}
+  .motion-ready .scroll-enter:focus-within{opacity:1;translate:none;scale:none}
+
+  @media (max-width:680px){
+    .hero{min-height:520px}
+    .hero-content{left:20px;right:20px;bottom:calc(16svh + env(safe-area-inset-bottom))}
+    .hero h1{font-size:clamp(40px,11.5vw,56px)}
+    .hero-chips span{font-size:12px}
+    .journey.journey-ready{height:290svh}
+    .journey-topline{left:6%;right:6%;font-size:11px}
+    .journey-topline>span{max-width:130px}
+    .journey-skip{padding:9px 12px}
+    .journey-caption{left:8%;right:8%;bottom:24%}
+    .journey-eyebrow{font-size:10.5px;letter-spacing:.1em;margin-bottom:12px}
+    .journey-caption h2{font-size:clamp(40px,11vw,60px)}
+    .journey-caption p{max-width:290px;line-height:1.5}
+    .journey-word{top:22%;font-size:30vw}
+    .journey-bottomline{left:8%;right:8%;bottom:calc(52px + env(safe-area-inset-bottom));font-size:11px;gap:16px}
+    .journey-steps{width:auto;flex:1;gap:10px}
+    .journey-credit{left:8%;right:8%;font-size:9.5px}
+    .intro{padding:28px 0 4px}
+    .photo{margin:-16px -16px 14px;border-radius:14px 14px 0 0}
+    .stop .photo{margin:-14px -14px 12px -50px}
+    .card-photo .suite-photo{height:210px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .journey.journey-ready{display:none}
+    .hero-cue{animation:none}
+    .hero-layer,.hero-content{transform:none!important;opacity:1!important}
+    .photo img{transform:none!important}
+    .scroll-enter{opacity:1!important;translate:none!important;scale:none!important}
+  }
 </style>
 </head>
 <body>
 
-<header>
+<header class="hero" id="inicio">
+  <div class="hero-layer" id="heroLayer">
+    <picture>
+      <source media="(max-width:680px)" srcset="img/hero_movil.webp">
+      <img src="img/hero.webp" alt="El acueducto de Segovia iluminado al anochecer" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="hero-scrim"></div>
+  <div class="hero-content" id="heroContent">
+    <p class="hero-kicker">28 y 29 de noviembre de 2026</p>
+    <h1>Nuestro aniversario<br>en <em>San Rafael</em></h1>
+    <p class="hero-lead">Segovia al atardecer, un spa en un convento y una mañana entre pinos. Un fin de semana para los dos.</p>
+    <div class="hero-chips">
+      <span>Suite Venus</span><span>Segovia</span><span>Spa</span><span>Sierra</span>
+    </div>
+  </div>
+  <a class="hero-cue" href="#viaje" aria-label="Bajar al plan"><span>Desliza</span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
+  <p class="photo-credit hero-credit">Foto: David Corral Gadea, CC BY-SA 3.0, Wikimedia Commons</p>
+</header>
+
+<section class="journey" id="viaje" aria-label="Un adelanto del fin de semana">
+  <div class="journey-stage">
+    <div class="journey-window">
+      <article class="journey-scene">
+        <img src="img/alcazar.webp" alt="El Alcázar de Segovia sobre la roca, con los árboles en otoño" decoding="async">
+        <span class="journey-word" aria-hidden="true">Segovia</span>
+        <div class="journey-caption">
+          <span class="journey-eyebrow">01 / Sábado por la tarde</span>
+          <h2>Pasear<br><em>sin reloj.</em></h2>
+          <p>La Judería, el Alcázar y el acueducto encendiéndose al anochecer.</p>
+        </div>
+      </article>
+      <article class="journey-scene" aria-hidden="true">
+        <img src="img/convento.webp" alt="Fachada del antiguo convento de los Capuchinos de Segovia" decoding="async">
+        <span class="journey-word" aria-hidden="true">Calma</span>
+        <div class="journey-caption">
+          <span class="journey-eyebrow">02 / Sábado por la noche</span>
+          <h2>Un convento<br><em>para los dos.</em></h2>
+          <p>Aguas, masaje en pareja y cena tranquila al volver.</p>
+        </div>
+      </article>
+      <article class="journey-scene" aria-hidden="true">
+        <img src="img/sierra_atardecer.webp" alt="La sierra de Guadarrama al atardecer desde El Espinar" decoding="async">
+        <span class="journey-word" aria-hidden="true">Sierra</span>
+        <div class="journey-caption">
+          <span class="journey-eyebrow">03 / Domingo por la mañana</span>
+          <h2>Despertar<br><em>entre pinos.</em></h2>
+          <p>La senda de la Peña del Águila, a un paso de la suite.</p>
+        </div>
+      </article>
+    </div>
+    <div class="journey-topline"><span>Un fin de semana. Los dos.</span><a href="#resumen" class="journey-skip">Ir al plan <span aria-hidden="true">↓</span></a></div>
+    <div class="journey-bottomline" aria-hidden="true">
+      <span class="journey-count">01 / 03</span>
+      <div class="journey-steps"><span><i></i>Segovia</span><span><i></i>Spa</span><span><i></i>Sierra</span></div>
+    </div>
+    <p class="photo-credit journey-credit" aria-hidden="true">Fotos: Antonio Sánchez Corbalán, Mdeazpeitia y Arturo Francisco Barbero, CC BY-SA 4.0, Wikimedia Commons</p>
+  </div>
+</section>
+
+<section class="intro" id="resumen">
   <div class="wrap">
-    <p class="eyebrow">28 y 29 de noviembre de 2026</p>
-    <h1>Nuestro aniversario en <em>San Rafael</em></h1>
-    <p class="lead">Luxury Suites El Encanto del Pinar, Suite Venus · 2 adultos · ida y vuelta desde Zaragoza</p>
+    <p class="eyebrow">De un vistazo</p>
     <div class="links" id="hotel-links"></div>
     <div class="glance">
       <div>
@@ -254,8 +400,9 @@
         <p><b>8:00</b> check out · <b>8:45</b> senda de la Peña del Águila · <b>10:45</b> hacia Madrid · comida en Madrid · vuelta a Zaragoza</p>
       </div>
     </div>
+  
   </div>
-</header>
+</section>
 
 <nav>
   <div class="wrap">
@@ -273,7 +420,8 @@
   <section id="alojamiento">
     <h2>Alojamiento</h2>
     <p class="sub">Luxury Suites El Encanto del Pinar · reserva en Booking confirmada</p>
-    <div class="card">
+    <div class="card card-photo">
+      <figure class="photo scroll-photo suite-photo"><img src="img/suite.webp" alt="La Suite Venus: cama, bañera exenta y cabecero tapizado" loading="lazy"><figcaption class="photo-credit">Suite Venus. Foto del alojamiento</figcaption></figure>
       <div class="facts">
         <div><span>Dirección</span>Calle Calzada 5, 40410 San Rafael (Segovia)</div>
         <div><span>Habitación</span>Suite Venus, suite privada en planta baja, con bañera, patio y vistas al jardín y a la montaña</div>
@@ -364,6 +512,8 @@ function btns(it){
   return h ? `<div class="links">${h}</div>` : "";
 }
 
+const photoHTML = p => `<figure class="photo scroll-photo"><img src="${p.src}" alt="${p.alt}" loading="lazy"><figcaption class="photo-credit">${p.credit}</figcaption></figure>`;
+
 /* Tiempo: media de las previsiones consultadas el 25/11/2026 (ver pie de página) */
 const ICONS = {
   sol:   '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>',
@@ -386,6 +536,7 @@ function render(id, items){
     <div class="item">
       <div class="when"><span class="t">${it.time}</span><span class="k">${it.tag || ""}</span></div>
       <div class="card ${it.feature ? "feature" : ""}">
+        ${it.photo ? photoHTML(it.photo) : ""}
         <h3>${it.title}</h3>
         ${it.wx ? wxHTML(it.wx) : ""}
         ${it.desc ? `<p>${it.desc}</p>` : ""}
@@ -408,6 +559,7 @@ const STOPS = [
    webs:[["Plaza Mayor", gm("Plaza Mayor, Segovia")]],
    hist:"<p>La catedral es <strong>la última gran catedral gótica de España</strong> y la llaman <em>la dama de las catedrales</em> por su esbeltez. La antigua estaba junto al Alcázar y quedó destrozada en la guerra de las Comunidades (1520), así que en 1525 se empezó esta nueva, con trazas de Juan Gil de Hontañón. Tardó más de dos siglos en terminarse.</p><p>En la <strong>Plaza Mayor</strong>, en la antigua iglesia de San Miguel, fue proclamada <strong>Isabel la Católica reina de Castilla</strong> el 13 de diciembre de 1474. La iglesia actual es posterior; la plaza la completan el teatro Juan Bravo y el templete de música.</p>"},
   {name:"El Alcázar, por fuera", q:"Alcázar de Segovia",
+   photo:{src:"img/alcazar.webp", alt:"El Alcázar de Segovia visto desde abajo", credit:"Foto: Antonio Sánchez Corbalán, CC BY-SA 4.0, Wikimedia Commons"},
    hint:"Se ve desde la plaza de la Reina Victoria Eugenia y desde ahí se baja a la pradera. Cierra a las 18:00 en invierno, así que mejor disfrutarlo desde fuera.",
    webs:[["Horarios","https://lamaletainquieta.com/alcazar-segovia/"]],
    hist:"<p>Está sobre una roca en la confluencia de los ríos <strong>Eresma y Clamores</strong>, con forma de proa de barco. Fue fortaleza y residencia de los reyes de Castilla desde la Edad Media. De aquí salió Isabel la Católica para su proclamación, y aquí se casó <strong>Felipe II con Ana de Austria</strong> en 1570.</p><p>En 1764 Carlos III instaló el Real Colegio de Artillería. Un incendio en 1862 destruyó las cubiertas, y las agujas de pizarra que vemos son de la reconstrucción. Se dice que inspiró el castillo de la Cenicienta de Disney, aunque no hay prueba documental.</p>"},
@@ -420,6 +572,7 @@ const STOPS = [
    webs:[["Iglesia de San Martín", gm("Iglesia de San Martín, Segovia")]],
    hist:"<p>En la <strong>plaza de Medina del Campo</strong> está la iglesia románica de San Martín, con su galería porticada, y la estatua de <strong>Juan Bravo</strong>, el jefe comunero segoviano ejecutado en Villalar en 1521.</p><p>Más abajo, la <strong>Casa de los Picos</strong>, del siglo XV, con la fachada cubierta de puntas de granito. Hoy es escuela de arte. Desde el mirador de la Canaleja, al final de la calle, se ve el acueducto desde arriba.</p>"},
   {name:"El acueducto iluminado", q:"Acueducto de Segovia, Plaza del Azoguejo",
+   photo:{src:"img/acueducto_tarde.webp", alt:"El acueducto de Segovia al anochecer", credit:"Foto: David Corral Gadea, CC BY-SA 3.0, Wikimedia Commons"},
    hint:"Final del paseo en la plaza del Azoguejo. Desde aquí subimos al spa, que está en la parte alta.",
    hist:"<p>Es <strong>romano</strong>, de finales del siglo I o principios del II, probablemente de la época de Trajano. Traía el agua del río Frío desde la sierra a lo largo de unos 15 km, y siguió funcionando hasta tiempos modernos.</p><p>Tiene <strong>167 arcos</strong> y en el Azoguejo alcanza unos 28 metros de altura. Está hecho con unos 20.000 sillares de granito <strong>sin argamasa</strong>: se sostiene por el equilibrio de las piedras. En 1985 la ciudad vieja y el acueducto se declararon Patrimonio de la Humanidad.</p><p>La leyenda dice que lo levantó el diablo en una noche, a cambio del alma de una aguadora cansada de subir agua. Ella rezó, el gallo cantó antes de que colocara la última piedra y se salvó. Los agujeros de los sillares serían las huellas de sus dedos; en realidad son de las tenazas de los canteros romanos. <em>Azoguejo</em> significa \"pequeño zoco\": era la plaza del mercado.</p>"}
 ];
@@ -429,6 +582,7 @@ const stopsHTML = `
     <summary><span class="reveal-pill"><span class="lbl-closed">Pulsa para descubrir el plan</span><span class="lbl-open">Plegar el plan</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
   <div class="stops">${STOPS.map(s => `
     <div class="stop">
+      ${s.photo ? photoHTML(s.photo) : ""}
       <h4>${s.name}${s.pill ? `<span class="pill">${s.pill}</span>` : ""}</h4>
       <p class="hint">${s.hint}</p>
       ${s.hist ? `<details open><summary>Un poco de historia</summary><div class="hist">${s.hist}</div></details>` : ""}
@@ -475,9 +629,10 @@ const SAT = [
      <div class="opt"><p><strong>Si todo está lleno:</strong> parking subterráneo Acueducto Oriental, en la misma avenida Padre Claret, 3,80 € la primera hora.</p>
        <p><strong>Lo que hay que evitar:</strong> entrar en coche dentro de la muralla. La Plaza Mayor y calles como Juan Bravo, Isabel la Católica, Infanta Isabel o Marqués del Arco son de prioridad peatonal: <strong>80 € de multa</strong>. El recinto amurallado es además zona de bajas emisiones con cámaras, y su zona verde es para residentes (1 hora al resto).</p></div>`}},
   {time:"16:00", tag:"Segovia", title:"Segovia, a nuestro aire", feature:true, id:"segovia", map:false,
+   photo:{src:"img/alcazar_pan.webp", alt:"Segovia con el Alcázar y la sierra nevada al fondo", credit:"Foto: Luis Antonio Fernández Corral, CC BY 2.0, Wikimedia Commons"},
    desc:"De 16:00 a 18:45, sin horas: paseo y atardecer. Las paradas van en orden para que el recorrido salga solo; paramos donde nos apetezca y nos saltamos lo que sobre. Todo andando.",
    extra: `<a class="routecta" target="_blank" rel="noopener" href="${walkRoute}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4l-5 2v14l5-2 6 2 5-2V4l-5 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>Ver la ruta del paseo en Google Maps</a>` + stopsHTML},
-  {time:"19:00", tag:"Spa", title:"Spa Spaxión, Áurea Convento Capuchinos", q:"Spa Spaxión Áurea Convento Capuchinos, Segovia", from:"Acueducto de Segovia", mode:"walking", tel:"921 051 477",
+  {time:"19:00", tag:"Spa", photo:{src:"img/convento.webp", alt:"El antiguo convento de los Capuchinos, donde está el spa", credit:"Foto: Mdeazpeitia, CC BY-SA 4.0, Wikimedia Commons"}, title:"Spa Spaxión, Áurea Convento Capuchinos", q:"Spa Spaxión Áurea Convento Capuchinos, Segovia", from:"Acueducto de Segovia", mode:"walking", tel:"921 051 477",
    webs:[["Web del spa","https://www.eurostarshotels.com/aurea-convento-capuchinos/spa.html"],["Modalidades y precios","#spa"]],
    desc:"En un antiguo convento de la parte alta del casco, junto a la plaza de Capuchinos. Desde el acueducto se sube andando, unos 10 a 15 minutos en cuesta (cálculo aproximado). Vamos a pie: está dentro de la muralla."},
   {time:"20:15", tag:"Vuelta", title:"Al coche y a San Rafael", q:HOTEL, from:PARK, map:false,
@@ -493,7 +648,7 @@ const WIKILOC = "https://es.wikiloc.com/rutas-senderismo/senda-de-la-pena-del-ag
 const SUN = [
   {time:"8:00", tag:"Desayuno", title:"Desayuno y check out", q:HOTEL, dir:false, map:false,
    desc:"El desayuno va incluido y el alojamiento ya tiene apuntada nuestra petición especial. La salida se puede hacer desde las 8:00: bajamos ya con las maletas y dejamos la habitación, porque después de la ruta salimos directos hacia Madrid."},
-  {time:"8:45", tag:"Montaña", title:"Senda de la Peña del Águila", feature:true, q:TRAILHEAD, from:HOTEL, map:false,
+  {time:"8:45", tag:"Montaña", photo:{src:"img/mujer_muerta.webp", alt:"La Mujer Muerta, una de las sierras que se ven desde el mirador", credit:"La Mujer Muerta, que se ve desde el mirador. Foto: Miguel303xm, CC BY-SA 2.5, Wikimedia Commons"}, title:"Senda de la Peña del Águila", feature:true, q:TRAILHEAD, from:HOTEL, map:false,
    webs:[["Ruta oficial en Wikiloc", WIKILOC]],
    desc:"Circular, fácil y señalizada, hasta un balcón natural sobre la sierra. Vamos en coche hasta el inicio, a pocos minutos, y allí lo dejamos.",
    box:{t:"La ruta", html:`
@@ -531,9 +686,91 @@ document.getElementById("sat-route").innerHTML = b("dir", dir(PARK, HOTEL), "Abr
 document.getElementById("spa-rows").innerHTML = SPA.map(s => `<tr${s.rec ? ' class="rec"' : ""}><td><strong>${s.o}</strong>${s.rec ? '<span class="pill pill-rec">Nuestra elección</span>' : ""}</td><td data-label="Qué incluye">${s.inc}</td><td class="price" data-label="Precio">${s.p}</td></tr>`).join("");
 document.getElementById("spa-links").innerHTML = b("web","https://www.eurostarshotels.com/aurea-convento-capuchinos/spa.html","Web del spa") + mapBtns("Spa Spaxión Áurea Convento Capuchinos, Segovia") + tel("921 051 477");
 
+// ---------- Scroll dinámico: hero, recorrido, fotos y tarjetas ----------
+(function scrollMotion(){
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)");
+  const hero = document.querySelector(".hero"), heroLayer = document.getElementById("heroLayer"), heroContent = document.getElementById("heroContent");
+  const journey = document.querySelector(".journey"), stage = journey.querySelector(".journey-stage"), frame = journey.querySelector(".journey-window");
+  const scenes = [...journey.querySelectorAll(".journey-scene")].map(el => ({el, image: el.querySelector("img"), word: el.querySelector(".journey-word"), caption: el.querySelector(".journey-caption")}));
+  const tracks = [...journey.querySelectorAll(".journey-steps i")], counter = journey.querySelector(".journey-count");
+  const clamp = (n, a = 0, b = 1) => Math.max(a, Math.min(b, n)), ease = n => n * n * (3 - 2 * n);
+  const records = new Map(), near = new Set();
+  let pending = 0, dirty = true, metrics = {}, current = -1;
+  document.querySelectorAll(".photo").forEach(el => records.set(el, {kind:"photo"}));
+  document.querySelectorAll(".card, .stop, ol.check li, .glance > div").forEach((el, i) => { el.classList.add("scroll-enter"); records.set(el, {kind:"card"}); });
+  const top = el => { let t = 0; for (let n = el; n; n = n.offsetParent) t += n.offsetTop; return t; };
+  function measure(){
+    metrics = {heroH: hero.offsetHeight, jTop: top(journey), jLen: Math.max(1, journey.offsetHeight - stage.offsetHeight), h: innerHeight, mobile: innerWidth <= 680};
+    records.forEach((r, el) => { r.top = top(el); r.height = el.offsetHeight; r.visible = el.getClientRects().length > 0; });
+    dirty = false;
+  }
+  function paint(){
+    pending = 0; if (dirty) measure(); if (reduced.matches) return;
+    const y = scrollY, {heroH, jTop, jLen, h, mobile} = metrics;
+    if (y < heroH + 50){
+      const hp = clamp(y / heroH);
+      heroLayer.style.transform = `translate3d(0,${y * (mobile ? .18 : .32)}px,0) scale(${1 + hp * .14})`;
+      heroContent.style.opacity = String(1 - ease(clamp(hp / .75)));
+      heroContent.style.transform = `translate3d(0,${-hp * (mobile ? 40 : 90)}px,0)`;
+    }
+    if (journey.offsetHeight && y + h >= jTop && y <= jTop + journey.offsetHeight){
+      const p = clamp((y - jTop) / jLen), open = ease(clamp(p / .2));
+      frame.style.clipPath = `inset(${(1 - open) * 8}% ${(1 - open) * (mobile ? 4 : 8)}% round ${(1 - open) * 28}px)`;
+      const b1 = ease(clamp((p - .26) / .15)), b2 = ease(clamp((p - .62) / .15));
+      const alphas = [1, b1, b2];
+      const caps = [1 - ease(clamp((p - .26) / .075)), ease(clamp((p - .335) / .075)) * (1 - ease(clamp((p - .62) / .075))), ease(clamp((p - .695) / .075))];
+      const sel = b2 >= .5 ? 2 : b1 >= .5 ? 1 : 0;
+      scenes.forEach((s, i) => {
+        const local = clamp((p - [0, .26, .62][i]) / .4);
+        s.el.style.opacity = String(alphas[i]);
+        s.image.style.transform = `scale(${1.15 - local * .12}) translate3d(${(local - .5) * (mobile ? -1 : -2)}%,${(local - .5) * 2}%,0)`;
+        s.word.style.transform = `translate3d(${(local - .5) * -14}%,0,0)`;
+        s.caption.style.transform = `translate3d(0,${(1 - local) * (mobile ? 32 : 60)}px,0)`;
+        s.caption.style.opacity = String(caps[i]);
+      });
+      if (sel !== current){ current = sel; counter.textContent = `0${sel + 1} / 03`; scenes.forEach((s, i) => s.el.setAttribute("aria-hidden", String(i !== sel))); }
+      tracks.forEach((t, i) => t.style.transform = `scaleX(${clamp((p - i / 3) * 3)})`);
+    }
+    near.forEach(el => {
+      const r = records.get(el); if (!r || !r.visible) return;
+      const t = r.top - y;
+      if (r.kind === "photo"){
+        const pr = clamp((h - t) / (h + r.height));
+        el.style.setProperty("--photo-y", `${((pr - .5) * (mobile ? 36 : 52)).toFixed(1)}px`);
+      } else {
+        const e = ease(clamp((h - t) / (h * .25)));
+        el.style.setProperty("--enter-opacity", String(.25 + e * .75));
+        el.style.setProperty("--enter-y", `${(1 - e) * (mobile ? 26 : 48)}px`);
+        el.style.setProperty("--enter-scale", String(.97 + e * .03));
+      }
+    });
+  }
+  const schedule = () => { if (!pending && !document.hidden) pending = requestAnimationFrame(paint); };
+  const refresh = () => { dirty = true; schedule(); };
+  window.refreshScrollMotion = refresh;
+  const io = new IntersectionObserver(es => { es.forEach(({target, isIntersecting}) => isIntersecting ? near.add(target) : near.delete(target)); schedule(); }, {rootMargin:"160px 0px"});
+  records.forEach((r, el) => io.observe(el));
+  if ("ResizeObserver" in window) new ResizeObserver(refresh).observe(document.querySelector("main"));
+  document.querySelectorAll("details").forEach(d => d.addEventListener("toggle", refresh));
+  function apply(){
+    document.documentElement.classList.toggle("motion-ready", !reduced.matches);
+    journey.classList.toggle("journey-ready", !reduced.matches);
+    if (reduced.matches){ records.forEach((r, el) => { el.style.removeProperty("--enter-opacity"); el.style.removeProperty("--enter-y"); el.style.removeProperty("--photo-y"); }); }
+    refresh();
+  }
+  reduced.addEventListener("change", apply);
+  addEventListener("scroll", schedule, {passive:true});
+  addEventListener("resize", refresh, {passive:true});
+  addEventListener("pageshow", refresh);
+  addEventListener("load", refresh);
+  document.fonts && document.fonts.ready.then(refresh);
+  apply();
+})();
+
 // Botón volver arriba
 const totop = document.getElementById("totop");
-addEventListener("scroll", () => totop.classList.toggle("show", scrollY > 900), {passive:true});
+const afterJourney = () => { const j = document.querySelector(".journey"); return j.offsetTop + j.offsetHeight; };
+addEventListener("scroll", () => totop.classList.toggle("show", scrollY > afterJourney()), {passive:true});
 totop.addEventListener("click", () => scrollTo({top:0}));
 
 // Menú: marca la sección visible y la mantiene a la vista
