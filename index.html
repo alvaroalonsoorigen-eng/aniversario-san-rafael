@@ -378,7 +378,7 @@ const WX_E = {i:"nubes", t:5,  w:3,  s:"Cubierto", r:"Sin lluvia"};
 const WX_F = {i:"nubes", t:6,  w:4,  s:"Cubierto, a 1.450 m", r:"Sin lluvia ni nieve"};
 const WX_G = {i:"nubes", t:8,  w:4,  s:"Cubierto", r:"Sin lluvia"};
 const WX_H = {i:"nubes", t:10, w:2,  s:"Cubierto, en Madrid", r:"Sin lluvia"};
-const windTxt = w => w < 6 ? `casi en calma, ${w} km/h` : `viento flojo, ${w} km/h`;
+const windTxt = w => w < 6 ? `casi en calma (${w} km/h)` : `flojo (${w} km/h)`;
 const wxHTML = x => `<div class="wx"><div class="wx-main"><span class="wx-i">${ICONS[x.i]}</span><span class="wx-t">${x.t} °C</span><span class="wx-s">${x.s}</span></div><div class="wx-sub">Viento ${windTxt(x.w)} · ${x.r}</div></div>`;
 
 function render(id, items){
