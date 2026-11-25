@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Nuestro plan de aniversario: San Rafael, Segovia y la sierra, 28 y 29 de noviembre de 2026.">
+<meta name="theme-color" content="#faf8f4">
+<meta name="color-scheme" content="light">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-title" content="Aniversario">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:title" content="Nuestro aniversario en San Rafael">
+<meta property="og:description" content="San Rafael, Segovia y la sierra, 28 y 29 de noviembre de 2026.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23faf8f4'/%3E%3Cpath d='M32 50s-16-9.6-16-21.2C16 22.4 20.6 18 26 18c3 0 5 1.6 6 3.4 1-1.8 3-3.4 6-3.4 5.4 0 10 4.4 10 10.8C48 40.4 32 50 32 50z' fill='%233d6657'/%3E%3C/svg%3E">
+<title>Nuestro aniversario en San Rafael</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --paper:#faf8f4;
+    --line:#ebe6dd;
+    --ink:#262a2e;
+    --muted:#757a80;
+    --pine:#3d6657;
+    --pine-soft:#edf3ef;
+    --pine-line:#cfe0d6;
+    --sand:#a8895c;
+    --sand-soft:#f6f0e6;
+    --sky:#4d7594;
+    --sky-soft:#eef3f7;
+    --serif:"Fraunces", Georgia, "Iowan Old Style", serif;
+    --sans:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+  a{color:var(--pine);text-underline-offset:3px}
+  .wrap{max-width:920px;margin:0 auto;padding:0 20px}
+
+  /* Cabecera */
+  header{background:var(--paper);border-bottom:1px solid var(--line);padding:56px 0 36px}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--sand);margin:0 0 10px}
+  h1{font-family:var(--serif);font-weight:400;font-size:44px;line-height:1.1;margin:0 0 12px;letter-spacing:-.01em}
+  h1 em{font-style:italic;color:var(--pine)}
+  .lead{color:var(--muted);margin:0;font-size:17px}
+  .glance{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+  .glance div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+  .glance h4{margin:0 0 6px;font-family:var(--serif);font-weight:600;font-size:16px}
+  .glance p{margin:0;font-size:14px;color:var(--muted);line-height:1.7}
+  .glance b{color:var(--ink);font-weight:500}
+
+  nav{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;gap:4px;overflow-x:auto;padding:10px 20px}
+  nav a{white-space:nowrap;text-decoration:none;color:var(--muted);font-size:14px;font-weight:500;padding:6px 12px;border-radius:999px}
+  nav a:hover{color:var(--pine);background:var(--pine-soft)}
+
+  section{padding:48px 0 8px}
+  h2{font-family:var(--serif);font-weight:400;font-size:30px;margin:0 0 6px;letter-spacing:-.01em}
+  .sub{color:var(--muted);margin:0 0 22px}
+
+  /* Mapas de ruta */
+  .routebox{border:1px solid var(--line);border-radius:16px;overflow:hidden;margin:0 0 26px;background:#fff}
+  .routebox iframe{display:block;width:100%;height:300px;border:0}
+  .routebox .bar{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding:12px 16px;font-size:14px;color:var(--muted)}
+
+  /* Línea de tiempo */
+  .timeline{position:relative;display:flex;flex-direction:column;gap:16px}
+  .item{display:grid;grid-template-columns:110px 1fr;gap:18px}
+  .when{padding-top:18px;text-align:right}
+  .when .t{font-family:var(--serif);font-size:20px;color:var(--ink);line-height:1.2}
+  .when .k{display:block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--sand);margin-top:4px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+  .card.feature{background:var(--paper)}
+  .card h3{font-family:var(--serif);font-weight:600;font-size:19px;margin:0 0 6px}
+  .card p{margin:0 0 10px;color:#43474c}
+  .card p:last-child{margin-bottom:0}
+
+  .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;text-decoration:none;padding:6px 12px;border-radius:999px;border:1px solid var(--line);color:var(--ink);background:#fff;transition:border-color .15s,background .15s}
+  .btn:hover{border-color:var(--pine);background:var(--pine-soft)}
+  .btn .dot{width:7px;height:7px;border-radius:50%;background:var(--muted)}
+  .btn.map .dot{background:var(--sky)}
+  .btn.dir .dot{background:var(--pine)}
+  .btn.web .dot{background:var(--sand)}
+
+  .box{background:var(--paper);border-radius:12px;padding:14px 16px;margin:12px 0 4px;font-size:15px}
+  .card.feature .box{background:#fff;border:1px solid var(--line)}
+  .box-t{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--pine);margin-bottom:6px}
+  .box p{margin:0 0 8px}
+  .box .opt + .opt{border-top:1px solid var(--line);margin-top:12px;padding-top:12px}
+
+  details{margin-top:12px}
+  details > summary{cursor:pointer;list-style:none;font-size:14px;font-weight:500;color:var(--pine)}
+  details > summary::-webkit-details-marker{display:none}
+  details > summary::before{content:"+";display:inline-block;width:16px;font-weight:600}
+  details[open] > summary::before{content:"\2212"}
+  details iframe{width:100%;height:240px;border:0;border-radius:12px;margin-top:10px}
+
+  /* Paseo por Segovia */
+  .stops{counter-reset:stop;margin-top:16px;display:flex;flex-direction:column;gap:12px}
+  .stop{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px 16px 58px}
+  .stop::before{counter-increment:stop;content:counter(stop);position:absolute;left:16px;top:15px;width:28px;height:28px;border-radius:50%;background:var(--pine-soft);color:var(--pine);font-weight:600;font-size:14px;display:flex;align-items:center;justify-content:center;border:1px solid var(--pine-line)}
+  .stop h4{margin:0 0 4px;font-family:var(--serif);font-weight:600;font-size:17px}
+  .stop .hint{font-size:14px;color:var(--muted);margin:0}
+  .stop .hist{font-size:15px;color:#43474c;margin-top:8px}
+  .stop .hist p{margin:0 0 8px}
+  .pill{display:inline-block;font-size:12px;font-weight:500;padding:2px 10px;border-radius:999px;background:var(--sand-soft);color:#7d6440;margin-left:6px;vertical-align:middle}
+
+  .routecta{display:inline-flex;align-items:center;gap:8px;margin-top:6px;padding:9px 16px;border-radius:999px;background:var(--pine);color:#fff;text-decoration:none;font-size:14px;font-weight:500}
+  .routecta:hover{background:#335649}
+  details.reveal{margin-top:14px}
+  details.reveal > summary{list-style:none}
+  details.reveal > summary::before{content:none}
+  .reveal-pill{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:var(--sand-soft);color:#7d6440;font-size:14px;font-weight:600;border:1px solid #eadfcd;transition:background .15s}
+  .reveal-pill:hover{background:#efe4d2}
+  .reveal-pill svg{transition:transform .2s}
+  details.reveal[open] .reveal-pill svg{transform:rotate(180deg)}
+  .reveal-pill .lbl-open{display:none}
+  details.reveal[open] .reveal-pill .lbl-open{display:inline}
+  details.reveal[open] .reveal-pill .lbl-closed{display:none}
+  .wx{font-size:13px;color:var(--muted);background:var(--sky-soft);border-radius:10px;padding:8px 12px;margin:2px 0 10px;width:fit-content;max-width:100%;line-height:1.4}
+  .wx-main{display:flex;align-items:flex-start;gap:8px;color:#43474c}
+  .wx-i{display:inline-flex;color:var(--sky);margin-top:1px;flex:none}
+  .wx-t{font-weight:600;color:var(--ink);white-space:nowrap;flex:none}
+  .wx-sub{margin-top:2px;padding-left:24px}
+  .daywx{display:flex;flex-wrap:wrap;gap:10px;margin:-8px 0 24px}
+  .daywx div{background:var(--sky-soft);border-radius:12px;padding:8px 14px;font-size:14px;color:#43474c}
+  .daywx span{display:block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--sky)}
+  .daywx b{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--ink)}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px}
+  .facts div{font-size:15px;color:#43474c}
+  .facts span{display:block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--sand);margin-bottom:2px}
+  @media (max-width:680px){.facts{grid-template-columns:1fr}}
+  .mapimg{margin-top:14px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+  .mapimg iframe{display:block;width:100%;height:420px;border:0}
+  @media (max-width:680px){.mapimg iframe{height:340px}}
+  .note{border:1px solid var(--line);background:var(--sand-soft);border-radius:14px;padding:14px 16px;margin:18px 0;font-size:15px}
+  .reco{border:1px solid var(--pine-line);background:var(--pine-soft);border-radius:14px;padding:14px 16px;margin:16px 0;font-size:15px}
+
+  table{width:100%;border-collapse:separate;border-spacing:0;font-size:15px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:last-child td{border-bottom:0}
+  th{background:var(--paper);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .price{font-family:var(--serif);font-size:17px;color:var(--pine);white-space:nowrap}
+  .tablewrap{overflow-x:auto}
+
+  tr.rec td{background:var(--pine-soft)}
+  .pill-rec{background:var(--pine);color:#fff}
+  ol.check{padding-left:0;list-style:none;counter-reset:r;margin:0}
+  ol.check li{counter-increment:r;position:relative;padding:14px 16px 14px 52px;border:1px solid var(--line);border-radius:14px;margin-bottom:10px;background:#fff}
+  ol.check li::before{content:counter(r);position:absolute;left:16px;top:14px;width:24px;height:24px;border-radius:50%;background:var(--sand-soft);color:#7d6440;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center}
+
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:28px 0 48px;color:var(--muted);font-size:13px}
+  footer ul{padding-left:18px}
+
+  @media (max-width:680px){
+    header{padding:40px 0 28px}
+    h1{font-size:32px}
+    .glance{grid-template-columns:1fr}
+    .item{grid-template-columns:1fr;gap:6px}
+    .when{text-align:left;padding-top:0;display:flex;align-items:baseline;gap:10px}
+    .when .k{margin-top:0}
+    .routebox iframe{height:230px}
+    .stop{padding-left:52px}
+  }
+
+  /* ---------- Ajustes de móvil (iPhone) y UX ---------- */
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  body{-webkit-tap-highlight-color:transparent;padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+  p,li,td,.hint,.box{overflow-wrap:break-word}
+  section,.item{scroll-margin-top:72px}
+  nav .wrap{scrollbar-width:none}
+  nav .wrap::-webkit-scrollbar{display:none}
+  nav a.active{color:var(--pine);background:var(--pine-soft)}
+  :focus-visible{outline:2px solid var(--pine);outline-offset:2px}
+  main{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+  .totop{position:fixed;right:max(16px, env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.96);border:1px solid var(--line);box-shadow:0 6px 18px rgba(38,42,46,.10);display:flex;align-items:center;justify-content:center;color:var(--pine);opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .2s,transform .2s;z-index:6;cursor:pointer}
+  .totop.show{opacity:1;pointer-events:auto;transform:none}
+  @media (hover:none){
+    .btn:hover{border-color:var(--line);background:#fff}
+    nav a:hover{background:none;color:var(--muted)}
+    nav a.active:hover{color:var(--pine);background:var(--pine-soft)}
+    .reveal-pill:hover{background:var(--sand-soft)}
+    .routecta:hover{background:var(--pine)}
+    .btn:active,.reveal-pill:active,.routecta:active{transform:scale(.97)}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  @media (max-width:680px){
+    .wrap{padding:0 16px}
+    header{padding:calc(28px + env(safe-area-inset-top)) 0 24px}
+    h1{font-size:34px;line-height:1.08}
+    .lead{font-size:16px;line-height:1.5}
+    .glance{gap:10px;margin-top:22px}
+    .glance p{font-size:15px}
+    nav .wrap{padding:8px 16px;gap:2px}
+    nav a{padding:8px 12px;font-size:15px}
+    section{padding:36px 0 4px}
+    h2{font-size:28px}
+    .sub{margin-bottom:18px}
+    .timeline{gap:22px}
+    .when .t{font-size:19px}
+    .card{padding:16px;border-radius:14px}
+    .card h3{font-size:18px;line-height:1.3}
+    .links{gap:8px}
+    .btn{min-height:40px;padding:8px 14px;font-size:14px}
+    details > summary{min-height:44px;display:flex;align-items:center}
+    details.reveal > summary{min-height:0;display:block}
+    .reveal-pill,.routecta{display:flex;min-height:46px;width:100%;justify-content:center;font-size:14px;white-space:nowrap}
+    .daywx{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:-6px}
+    .daywx div:last-child{grid-column:1/-1}
+    .wx{width:100%}
+    .box{padding:12px 14px}
+    .stop{padding:14px 14px 14px 50px}
+    .stop::before{left:12px;top:13px}
+    .stop h4{font-size:17px;line-height:1.3}
+    .pill{margin:4px 0 0;display:table}
+    .routebox{border-radius:14px}
+    .routebox iframe{height:220px}
+    .mapimg iframe{height:380px}
+    .facts{gap:12px}
+    table,thead,tbody,tr,td{display:block;width:100%}
+    thead{display:none}
+    table{border:0;border-radius:0;overflow:visible}
+    tr{border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:10px;background:#fff}
+    tr.rec{border-color:var(--pine-line);background:var(--pine-soft)}
+    tr.rec td{background:none}
+    td{border:0!important;padding:2px 0}
+    td[data-label]::before{content:attr(data-label);display:block;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--sand);margin-top:8px}
+    .price{white-space:normal}
+    ol.check li{padding:14px 14px 14px 48px}
+    .note,.reco{padding:14px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">28 y 29 de noviembre de 2026</p>
+    <h1>Nuestro aniversario en <em>San Rafael</em></h1>
+    <p class="lead">Luxury Suites El Encanto del Pinar, Suite Venus · 2 adultos · ida y vuelta desde Zaragoza</p>
+    <div class="links" id="hotel-links"></div>
+    <div class="glance">
+      <div>
+        <h4>Sábado</h4>
+        <p><b>13:00</b> llegada · <b>13:30</b> comida cerca · <b>15:00</b> check-in · <b>16:00 a 18:45</b> Segovia a nuestro aire · <b>19:00</b> spa · <b>21:15</b> cena</p>
+      </div>
+      <div>
+        <h4>Domingo</h4>
+        <p><b>8:00</b> check out · <b>8:45</b> senda de la Peña del Águila · <b>10:45</b> hacia Madrid · comida en Madrid · vuelta a Zaragoza</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#alojamiento">Alojamiento</a>
+    <a href="#sabado">Sábado</a>
+    <a href="#segovia">Segovia</a>
+    <a href="#domingo">Domingo</a>
+    <a href="#spa">Spa</a>
+    <a href="#reservas">Reservas</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="alojamiento">
+    <h2>Alojamiento</h2>
+    <p class="sub">Luxury Suites El Encanto del Pinar · reserva en Booking confirmada</p>
+    <div class="card">
+      <div class="facts">
+        <div><span>Dirección</span>Calle Calzada 5, 40410 San Rafael (Segovia)</div>
+        <div><span>Habitación</span>Suite Venus, suite privada en planta baja, con bañera, patio y vistas al jardín y a la montaña</div>
+        <div><span>Entrada</span>Sábado 28 de noviembre, de 14:00 a 23:30</div>
+        <div><span>Salida</span>Domingo 29 de noviembre, de 8:00 a 12:00</div>
+        <div><span>Huéspedes</span>2 adultos, 1 noche</div>
+        <div><span>Desayuno</span>Incluido. Petición especial para el desayuno comunicada y confirmada por el alojamiento</div>
+        <div><span>Precio</span>145 €; Booking lo cobra automáticamente en la tarjeta</div>
+        <div><span>Teléfono</span><a href="tel:+34921171412">921 17 14 12</a></div>
+      </div>
+      <div class="links" id="hotel-links2"></div>
+    </div>
+  </section>
+
+  <section id="sabado">
+    <h2>Sábado 28</h2>
+    <p class="sub">Segovia está a unos 25 minutos, lo único que pasa un poco de los 20.</p>
+    <div class="daywx">
+      <div><span>San Rafael</span><b>2°</b> mín · <b>11°</b> máx</div>
+      <div><span>Segovia</span><b>3°</b> mín · <b>11°</b> máx</div>
+      <div><span>Cielo</span>Soleado con nubes altas, nublado por la noche. Sin lluvia</div>
+    </div>
+    <div class="routebox">
+      <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?saddr=San+Rafael,+Segovia&daddr=Avenida+Padre+Claret,+Segovia&output=embed"
+        title="Ruta de San Rafael a Segovia"></iframe>
+      <div class="bar"><span>San Rafael a Segovia, hasta el aparcamiento</span><span id="sat-route"></span></div>
+    </div>
+    <div class="timeline" id="sat"></div>
+  </section>
+
+  <section id="domingo">
+    <h2>Domingo 29</h2>
+    <p class="sub">Ruta por la mañana con las maletas ya en el coche, y de ahí directos a Madrid. Amanece hacia las 8:25.</p>
+    <div class="daywx">
+      <div><span>San Rafael</span><b>3°</b> mín · <b>10°</b> máx</div>
+      <div><span>Cielo</span>Cubierto todo el día. Lluvia poco probable (20 % según AEMET); nieve solo por encima de 2.300 m</div>
+    </div>
+    <div class="timeline" id="sun"></div>
+    <div class="note"><strong>Ojo con el tiempo.</strong> Hoy las previsiones dan un domingo cubierto y seco, sin nieve. Aun así, a primera hora puede haber escarcha o barro en la senda: calzado con buena suela y ropa de abrigo. Volvemos a mirar la previsión el sábado por la noche. Si el día sale feo, plan B: paseo por el pinar y el casco de El Espinar, a 5 minutos.
+      <div class="links"><a class="btn web" target="_blank" rel="noopener" href="https://www.aemet.es/es/eltiempo/prediccion/municipios/el-espinar-id40076"><span class="dot"></span>Previsión AEMET de El Espinar</a></div>
+    </div>
+  </section>
+
+  <section id="spa">
+    <h2>Spa Spaxión</h2>
+    <p class="sub">Áurea Convento Capuchinos, Segovia. Precios orientativos de webs de reserva y guías: los confirmamos al reservar.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Modalidad</th><th>Qué incluye</th><th>Precio</th></tr></thead>
+        <tbody id="spa-rows"></tbody>
+      </table>
+    </div>
+    <div class="links" id="spa-links"></div>
+    <div class="reco"><strong>Recomendación:</strong> circuito y masaje en pareja, para que sea el plan especial del aniversario. El circuito puede ser compartido con otros clientes.</div>
+  </section>
+
+  <section id="reservas">
+    <h2>Reservas que conviene hacer ya</h2>
+    <p class="sub">Con un fin de semana de finales de noviembre, mejor no dejarlo para el viernes.</p>
+    <ol class="check">
+      <li><strong>Comida del sábado, 13:30, cerca del alojamiento.</strong> El Espino, <a href="tel:+34921182360">921 182 360</a>, o Los Jardines de la Brasería, <a href="tel:+34921171790">921 171 790</a>. Si al final preferimos Segovia, a las 14:00 o 14:30: Casa Comala o Mesón Don Sancho, los dos en <a href="https://www.opentable.es/r/casa-comala-segovia?covers=2&dateTime=2026-11-28T14%3A00" target="_blank" rel="noopener">OpenTable</a>.</li>
+      <li><strong>Spa del sábado, 19:00.</strong> Spaxión, <a href="tel:+34921051477">921 051 477</a> o en su <a href="https://www.eurostarshotels.com/aurea-convento-capuchinos/spa.html" target="_blank" rel="noopener">web</a>.</li>
+      <li><strong>Cena del sábado, 21:15.</strong> El Bistró de Jaime (teléfono en su ficha de Google Maps).</li>    </ol>
+  </section>
+
+</main>
+
+<button class="totop" id="totop" aria-label="Volver arriba"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+<script>
+const HOTEL = "Luxury Suites El Encanto del Pinar, Calle Calzada 5, 40410 San Rafael, Segovia";
+const PARK  = "Avenida Padre Claret, Segovia";
+const gm  = q => "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q);
+const dir = (q, from, mode) => "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(q) +
+            (from ? "&origin=" + encodeURIComponent(from) : "") + "&travelmode=" + (mode || "driving");
+const emb = q => "https://www.google.com/maps?q=" + encodeURIComponent(q) + "&output=embed";
+
+const b = (cls, href, label, ext=true) => `<a class="btn ${cls}" ${ext ? 'target="_blank" rel="noopener"' : ""} href="${href}"><span class="dot"></span>${label}</a>`;
+const mapBtns = (q, from, mode) => b("map", gm(q), "Google Maps") + (from !== false ? b("dir", dir(q, from, mode), "Cómo llegar") : "");
+const tel = t => b("", "tel:+34" + t.replace(/\s/g,""), "Llamar " + t, false);
+
+function btns(it){
+  let h = "";
+  if (it.q) h += mapBtns(it.q, it.dir === false ? false : it.from, it.mode);
+  (it.webs || []).forEach(w => h += b("web", w[1], w[0], !w[1].startsWith("#")));
+  if (it.tel) h += tel(it.tel);
+  return h ? `<div class="links">${h}</div>` : "";
+}
+
+/* Tiempo: media de las previsiones consultadas el 25/11/2026 (ver pie de página) */
+const ICONS = {
+  sol:   '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>',
+  mixto: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="9" r="3.4"/><path d="M9 2.5v1.6M2.5 9h1.6M4.4 4.4l1.1 1.1M13.6 4.4l-1.1 1.1"/><path d="M8.5 19.5h9a3.5 3.5 0 0 0 0-7 4.6 4.6 0 0 0-8.7 1.4A2.8 2.8 0 0 0 8.5 19.5z"/></svg>',
+  nubes: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M7 18.5h10.5a4 4 0 0 0 0-8 5.5 5.5 0 0 0-10.4 1.6A3.2 3.2 0 0 0 7 18.5z"/></svg>'
+};
+const WX_A = {i:"mixto", t:10, w:7,  s:"Sol y algunas nubes", r:"Sin lluvia"};
+const WX_B = {i:"mixto", t:9,  w:4,  s:"Sol con nubes altas; se va cubriendo al atardecer", r:"Sin lluvia"};
+const WX_C = {i:"nubes", t:7,  w:3,  s:"Nublado", r:"Sin lluvia"};
+const WX_D = {i:"nubes", t:5,  w:3,  s:"Nublado", r:"Sin lluvia"};
+const WX_E = {i:"nubes", t:5,  w:3,  s:"Cubierto", r:"Sin lluvia"};
+const WX_F = {i:"nubes", t:6,  w:4,  s:"Cubierto, a 1.450 m", r:"Sin lluvia ni nieve"};
+const WX_G = {i:"nubes", t:8,  w:4,  s:"Cubierto", r:"Sin lluvia"};
+const WX_H = {i:"nubes", t:10, w:2,  s:"Cubierto, en Madrid", r:"Sin lluvia"};
+const windTxt = w => w < 6 ? `casi en calma, ${w} km/h` : `viento flojo, ${w} km/h`;
+const wxHTML = x => `<div class="wx"><div class="wx-main"><span class="wx-i">${ICONS[x.i]}</span><span class="wx-t">${x.t} °C</span><span class="wx-s">${x.s}</span></div><div class="wx-sub">Viento ${windTxt(x.w)} · ${x.r}</div></div>`;
+
+function render(id, items){
+  document.getElementById(id).innerHTML = items.map(it => `
+    <div class="item">
+      <div class="when"><span class="t">${it.time}</span><span class="k">${it.tag || ""}</span></div>
+      <div class="card ${it.feature ? "feature" : ""}">
+        <h3>${it.title}</h3>
+        ${it.wx ? wxHTML(it.wx) : ""}
+        ${it.desc ? `<p>${it.desc}</p>` : ""}
+        ${btns(it)}
+        ${it.box ? `<div class="box"><div class="box-t">${it.box.t}</div>${it.box.html}</div>` : ""}
+        ${it.extra || ""}
+        ${it.q && it.map !== false ? `<details class="mini"><summary>Ver mapa aquí</summary><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-src="${emb(it.q)}" title="${it.title}"></iframe></details>` : ""}
+      </div>
+    </div>`).join("");
+}
+
+/* ---------- Paseo por Segovia: un solo bloque ---------- */
+const STOPS = [
+  {name:"La Judería", q:"Centro Didáctico de la Judería, Segovia",
+   hint:"Desde el coche, unos 10 a 15 minutos a pie subiendo por la calle Real. Calles Judería Vieja y Judería Nueva, a espaldas de la catedral.",
+   webs:[["Antigua sinagoga", gm("Iglesia del Corpus Christi, Segovia")]],
+   hist:"<p>Segovia tuvo una de las comunidades judías más importantes de Castilla. En 1481 se las obligó a vivir apartadas en este barrio, cerrado con portillos, hasta la expulsión de 1492.</p><p>Su figura más conocida es <strong>Abraham Seneor</strong>, rabí mayor de Castilla y tesorero de los Reyes Católicos, que se convirtió en 1492 y pasó a llamarse Fernán Pérez Coronel. En su casa está hoy el Centro Didáctico de la Judería.</p><p>La <strong>sinagoga mayor</strong> se convirtió en la iglesia del Corpus Christi a principios del siglo XV. Ardió en 1899 y se rehízo, pero conserva la planta de arcos de herradura, de estilo muy parecido a Santa María la Blanca de Toledo.</p>"},
+  {name:"Catedral y Plaza Mayor", q:"Catedral de Segovia",
+   hint:"A dos minutos de la Judería.",
+   webs:[["Plaza Mayor", gm("Plaza Mayor, Segovia")]],
+   hist:"<p>La catedral es <strong>la última gran catedral gótica de España</strong> y la llaman <em>la dama de las catedrales</em> por su esbeltez. La antigua estaba junto al Alcázar y quedó destrozada en la guerra de las Comunidades (1520), así que en 1525 se empezó esta nueva, con trazas de Juan Gil de Hontañón. Tardó más de dos siglos en terminarse.</p><p>En la <strong>Plaza Mayor</strong>, en la antigua iglesia de San Miguel, fue proclamada <strong>Isabel la Católica reina de Castilla</strong> el 13 de diciembre de 1474. La iglesia actual es posterior; la plaza la completan el teatro Juan Bravo y el templete de música.</p>"},
+  {name:"El Alcázar, por fuera", q:"Alcázar de Segovia",
+   hint:"Se ve desde la plaza de la Reina Victoria Eugenia y desde ahí se baja a la pradera. Cierra a las 18:00 en invierno, así que mejor disfrutarlo desde fuera.",
+   webs:[["Horarios","https://lamaletainquieta.com/alcazar-segovia/"]],
+   hist:"<p>Está sobre una roca en la confluencia de los ríos <strong>Eresma y Clamores</strong>, con forma de proa de barco. Fue fortaleza y residencia de los reyes de Castilla desde la Edad Media. De aquí salió Isabel la Católica para su proclamación, y aquí se casó <strong>Felipe II con Ana de Austria</strong> en 1570.</p><p>En 1764 Carlos III instaló el Real Colegio de Artillería. Un incendio en 1862 destruyó las cubiertas, y las agujas de pizarra que vemos son de la reconstrucción. Se dice que inspiró el castillo de la Cenicienta de Disney, aunque no hay prueba documental.</p>"},
+  {name:"Atardecer en la Pradera de San Marcos", pill:"sol hacia las 17:50", q:"Mirador de la Pradera de San Marcos, Segovia",
+   hint:"La mejor vista del Alcázar. Unos 15 minutos bajando a pie. El único momento del paseo con reloj: estar aquí un poco antes de que se ponga el sol.",
+   webs:[["Vera Cruz", gm("Iglesia de la Vera Cruz, Segovia")]],
+   hist:"<p>Desde aquí se entiende por qué el Alcázar parece un barco. Muy cerca está la <strong>iglesia de la Vera Cruz</strong>, de 1208, una rareza de planta de doce lados que la tradición atribuye a los templarios y que hoy pertenece a la Orden de Malta. Al otro lado está el convento de los Carmelitas, donde está enterrado <strong>San Juan de la Cruz</strong>.</p>"},
+  {name:"Calle Real", q:"Casa de los Picos, Segovia",
+   hint:"Se vuelve a subir al casco y se baja por la calle Real (Isabel la Católica, Juan Bravo y Cervantes), la de siempre de los segovianos, ya con las luces encendidas.",
+   webs:[["Iglesia de San Martín", gm("Iglesia de San Martín, Segovia")]],
+   hist:"<p>En la <strong>plaza de Medina del Campo</strong> está la iglesia románica de San Martín, con su galería porticada, y la estatua de <strong>Juan Bravo</strong>, el jefe comunero segoviano ejecutado en Villalar en 1521.</p><p>Más abajo, la <strong>Casa de los Picos</strong>, del siglo XV, con la fachada cubierta de puntas de granito. Hoy es escuela de arte. Desde el mirador de la Canaleja, al final de la calle, se ve el acueducto desde arriba.</p>"},
+  {name:"El acueducto iluminado", q:"Acueducto de Segovia, Plaza del Azoguejo",
+   hint:"Final del paseo en la plaza del Azoguejo. Desde aquí subimos al spa, que está en la parte alta.",
+   hist:"<p>Es <strong>romano</strong>, de finales del siglo I o principios del II, probablemente de la época de Trajano. Traía el agua del río Frío desde la sierra a lo largo de unos 15 km, y siguió funcionando hasta tiempos modernos.</p><p>Tiene <strong>167 arcos</strong> y en el Azoguejo alcanza unos 28 metros de altura. Está hecho con unos 20.000 sillares de granito <strong>sin argamasa</strong>: se sostiene por el equilibrio de las piedras. En 1985 la ciudad vieja y el acueducto se declararon Patrimonio de la Humanidad.</p><p>La leyenda dice que lo levantó el diablo en una noche, a cambio del alma de una aguadora cansada de subir agua. Ella rezó, el gallo cantó antes de que colocara la última piedra y se salvó. Los agujeros de los sillares serían las huellas de sus dedos; en realidad son de las tenazas de los canteros romanos. <em>Azoguejo</em> significa \"pequeño zoco\": era la plaza del mercado.</p>"}
+];
+
+const stopsHTML = `
+  <details class="reveal">
+    <summary><span class="reveal-pill"><span class="lbl-closed">Pulsa para descubrir el plan</span><span class="lbl-open">Plegar el plan</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+  <div class="stops">${STOPS.map(s => `
+    <div class="stop">
+      <h4>${s.name}${s.pill ? `<span class="pill">${s.pill}</span>` : ""}</h4>
+      <p class="hint">${s.hint}</p>
+      ${s.hist ? `<details open><summary>Un poco de historia</summary><div class="hist">${s.hist}</div></details>` : ""}
+      <div class="links">${b("map", gm(s.q), "Google Maps")}${(s.webs||[]).map(w => b("web", w[1], w[0])).join("")}${s.tel ? tel(s.tel) : ""}</div>
+    </div>`).join("")}
+  </div>
+  </details>`;
+
+const walkRoute = "https://www.google.com/maps/dir/?api=1&origin=" + encodeURIComponent(PARK) + "&destination=" + encodeURIComponent("Acueducto de Segovia, Plaza del Azoguejo") + "&waypoints=" + ["Calle Judería Vieja, Segovia", "Catedral de Segovia", "Alcázar de Segovia", "Mirador de la Pradera de San Marcos, Segovia", "Plaza de Medina del Campo, Segovia"].map(encodeURIComponent).join("%7C") + "&travelmode=walking";
+
+const SAT = [
+  {time:"13:00", tag:"Llegada", title:"Llegada a San Rafael", q:HOTEL, dir:false,
+   desc:"El check-in es a partir de las 14:00, así que a esta hora todavía no tenemos habitación. Si queremos, llamamos al alojamiento (<a href=\"tel:+34921171412\">921 17 14 12</a>) para dejar las maletas; si no, se quedan en el coche y entramos después de comer."},
+  {time:"13:30", tag:"Comida", title:"Comida cerca del alojamiento", map:false,
+   desc:"La opción principal: comer tranquilos aquí al lado, sin prisas por llegar a Segovia ni buscar aparcamiento con hambre. Ninguno está reservado todavía.",
+   extra:`<div class="box"><div class="box-t">Tres opciones a 5 minutos o menos</div>
+       <div class="opt"><p><strong>El Espino</strong>, plaza del Altozano 4, El Espinar. El mejor valorado del municipio en Gastroranking: 8,8 sobre 583 opiniones. Pequeño, 30 plazas, casero y muy cuidado; destacan el trato y el consomé. Precio sin publicar: lo preguntamos al reservar.</p>
+         <div class="links">${mapBtns("Restaurante El Espino, Plaza Altozano 4, El Espinar, Segovia", HOTEL)}${b("web","https://www.turismocastillayleon.com/en/services/eat/restaurants/espino","Ficha de turismo")}${tel("921 182 360")}</div></div>
+       <div class="opt"><p><strong>Los Jardines de la Brasería</strong>, calle Calzada, la misma calle del alojamiento: se puede ir andando. Ambiente de sierra, 3 tenedores, especialidad en carnes. 7,9 sobre 572 opiniones. Precio sin publicar.</p>
+         <div class="links">${mapBtns("Los Jardines de la Brasería, San Rafael, Segovia", HOTEL)}${b("web","https://gastroranking.es/r/los-jardines-de-la-braseria_177132/","Opiniones")}${tel("921 171 790")}</div></div>
+       <div class="opt"><p><strong>Plaza Restaurante Hostal</strong>, El Espinar. El más seguro en precio, de 20 a 30 € por persona. 8,6 sobre más de 2.500 opiniones; famoso por el cocido y el cachopo. Menos romántico, más contundente.</p>
+         <div class="links">${mapBtns("Plaza Restaurante Hostal, El Espinar, Segovia", HOTEL)}${b("web","https://gastroranking.es/r/plaza-restaurante-hostal_80730/","Opiniones")}</div></div>
+     </div>
+     <details><summary>Opción secundaria: comer en Segovia</summary>
+       <div class="box"><div class="box-t">Dos opciones con reserva online</div>
+         <p>Salimos hacia Segovia a las 13:30, aparcamos hacia las 14:00 y comemos a las 14:00 o 14:30. El 25 de noviembre, en su página de reservas de OpenTable, había mesa para 2 el sábado 28 en esas horas; puede cambiar hasta que reservemos. El paseo empieza al salir de comer.</p>
+         <div class="opt"><p><strong>Casa Comala</strong>, calle Judería Vieja 5, en plena Judería. Cocina de fusión mexicana y castellana, local con encanto y ambiente relajado. Hasta 30 € según OpenTable, de 20 a 30 € según otra guía; alguna opinión lo ve algo caro. 7,9 en Gastroranking sobre 213 opiniones. <strong>Huecos vistos: 14:00 y 15:00.</strong></p>
+           <div class="links">${b("dir","https://www.opentable.es/r/casa-comala-segovia?covers=2&dateTime=2026-11-28T14%3A00","Reservar en OpenTable")}${mapBtns("Casa Comala, Calle Judería Vieja 5, Segovia", PARK, "walking")}${b("web","https://casacomala.es/","Web")}${tel("623 06 02 41")}</div></div>
+         <div class="opt"><p><strong>Mesón Don Sancho</strong>, calle Doctor Sancho 9. Mesón pequeño y familiar de cocina segoviana tradicional: cochinillo, cordero y ponche segoviano. Hasta 30 €. 7,8 sobre más de 2.000 opiniones de TheFork, aunque hay quejas sobre algún pescado y el precio; mejor pedir los asados. <strong>Huecos vistos: 14:00 y 14:30.</strong></p>
+           <div class="links">${b("dir","https://www.opentable.es/r/meson-don-sancho-segovia?covers=2&dateTime=2026-11-28T14%3A00","Reservar en OpenTable")}${mapBtns("Mesón Don Sancho, Calle Doctor Sancho 9, Segovia", PARK, "walking")}${tel("921 42 06 46")}</div></div>
+       </div></details>`},
+  {time:"15:00", tag:"Check-in", title:"Check-in en la Suite Venus", q:HOTEL, dir:false, map:false,
+   desc:"Al volver de comer: dejamos las maletas, vemos la suite y salimos hacia Segovia. Datos de la reserva en la sección <a href=\"#alojamiento\">Alojamiento</a>."},
+  {time:"15:30", tag:"Coche", title:"A Segovia y aparcar gratis", q:PARK, from:HOTEL,
+   webs:[["Guía para aparcar","https://lamaletainquieta.com/aparcar-segovia/"]],
+   desc:"Unos 30 km por la N-603. <strong>La zona azul no se cobra el sábado desde las 14:00</strong> ni el domingo, así que podemos dejar el coche pegado al acueducto, fuera de la muralla y en avenidas de asfalto. En el navegador ponemos la calle del aparcamiento, nunca un restaurante ni un monumento.",
+   box:{t:"Dónde dejar el coche, por orden", html:`
+     <div class="opt"><p><strong>1. Avenida Padre Claret</strong>, junto al acueducto por el lado este. Zona azul, gratis desde las 14:00. Avenida ancha. Si por la opción de comer en Segovia llegamos unos minutos antes de las 14:00, pagamos ese rato en el parquímetro (mejor llevar monedas).</p>
+       <div class="links">${mapBtns("Avenida Padre Claret, Segovia", HOTEL)}</div></div>
+     <div class="opt"><p><strong>2. Paseo de Ezequiel González y calle los Barreros</strong>, junto a la estación de autobuses, a 5 minutos a pie del acueducto. El paseo es zona azul (gratis desde las 14:00) y Barreros no tiene parquímetro nunca.</p>
+       <div class="links">${mapBtns("Paseo de Ezequiel González, Segovia", HOTEL)}</div></div>
+     <div class="opt"><p><strong>3. Calle Cardenal Zúñiga</strong>, al este, sin parquímetro, a unos 600 m del acueducto. En fin de semana se llena.</p>
+       <div class="links">${mapBtns("Calle Cardenal Zúñiga, Segovia", HOTEL)}</div></div>
+     <div class="opt"><p><strong>Si todo está lleno:</strong> parking subterráneo Acueducto Oriental, en la misma avenida Padre Claret, 3,80 € la primera hora.</p>
+       <p><strong>Lo que hay que evitar:</strong> entrar en coche dentro de la muralla. La Plaza Mayor y calles como Juan Bravo, Isabel la Católica, Infanta Isabel o Marqués del Arco son de prioridad peatonal: <strong>80 € de multa</strong>. El recinto amurallado es además zona de bajas emisiones con cámaras, y su zona verde es para residentes (1 hora al resto).</p></div>`}},
+  {time:"16:00", tag:"Segovia", title:"Segovia, a nuestro aire", feature:true, id:"segovia", map:false,
+   desc:"De 16:00 a 18:45, sin horas: paseo y atardecer. Las paradas van en orden para que el recorrido salga solo; paramos donde nos apetezca y nos saltamos lo que sobre. Todo andando.",
+   extra: `<a class="routecta" target="_blank" rel="noopener" href="${walkRoute}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4l-5 2v14l5-2 6 2 5-2V4l-5 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>Ver la ruta del paseo en Google Maps</a>` + stopsHTML},
+  {time:"19:00", tag:"Spa", title:"Spa Spaxión, Áurea Convento Capuchinos", q:"Spa Spaxión Áurea Convento Capuchinos, Segovia", from:"Acueducto de Segovia", mode:"walking", tel:"921 051 477",
+   webs:[["Web del spa","https://www.eurostarshotels.com/aurea-convento-capuchinos/spa.html"],["Modalidades y precios","#spa"]],
+   desc:"En un antiguo convento de la parte alta del casco, junto a la plaza de Capuchinos. Desde el acueducto se sube andando, unos 10 a 15 minutos en cuesta (cálculo aproximado). Vamos a pie: está dentro de la muralla."},
+  {time:"20:15", tag:"Vuelta", title:"Al coche y a San Rafael", q:HOTEL, from:PARK, map:false,
+   desc:"Unos 15 minutos andando cuesta abajo hasta el coche y 25 de carretera."},
+  {time:"21:15", tag:"Cena", title:"El Bistró de Jaime", q:"El Bistró de Jaime, Travesía Alto del León 17, San Rafael, Segovia",
+   webs:[["Opiniones","https://gastroranking.es/r/el-bistro-de-jaime_219460/"]],
+   desc:"Al lado del alojamiento, sin coger el coche de noche. Un 9,2 en Google. Precio sin confirmar: lo preguntamos al reservar."}
+];
+
+const TRAILHEAD = "Calle Arroyo Mayor, San Rafael, Segovia";
+const WIKILOC = "https://es.wikiloc.com/rutas-senderismo/senda-de-la-pena-del-aguila-san-rafael-segovia-122300943";
+
+const SUN = [
+  {time:"8:00", tag:"Desayuno", title:"Desayuno y check out", q:HOTEL, dir:false, map:false,
+   desc:"El desayuno va incluido y el alojamiento ya tiene apuntada nuestra petición especial. La salida se puede hacer desde las 8:00: bajamos ya con las maletas y dejamos la habitación, porque después de la ruta salimos directos hacia Madrid."},
+  {time:"8:45", tag:"Montaña", title:"Senda de la Peña del Águila", feature:true, q:TRAILHEAD, from:HOTEL, map:false,
+   webs:[["Ruta oficial en Wikiloc", WIKILOC]],
+   desc:"Circular, fácil y señalizada, hasta un balcón natural sobre la sierra. Vamos en coche hasta el inicio, a pocos minutos, y allí lo dejamos.",
+   box:{t:"La ruta", html:`
+     <p><strong>6,41 km · 213 m de desnivel · fácil · unas 2 horas</strong> (1 h 38 min en movimiento). Altitud entre 1.260 y 1.472 m.</p>
+     <p><strong>Inicio.</strong> Calle del Arroyo Mayor, a la izquierda de la N-VI según se baja del puerto de Guadarrama, pasado el km 61, a la altura de la ermita de la Virgen del Carmen. Hay zona de aparcamiento y un cartel explicativo que marca la salida.</p>
+     <p><strong>Subida.</strong> A los 200 m se deja la pista asfaltada y se cruza el arroyo Mayor por un puente de madera. Se pasa una cancela con torno y se sigue la señal de la senda junto a la tapia de la cerca de las Monjas. Está balizada con marcas blancas y amarillas y señales verticales, pero sin pintura en árboles ni piedras.</p>
+     <p><strong>El mirador.</strong> A 2,4 km, unos 50 minutos a ritmo suave. Está a unos 70 m a la derecha de un collado con cancela, entre rocas, con una mesa que identifica lo que se ve: Cueva Valiente, la sierra del Quintanar y La Mujer Muerta.</p>
+     <p><strong>Bajada.</strong> Se cruza la cancela hacia Ávila (Peguerinos) y, 250 m más allá, en una curva con doble señal, se gira casi en redondo. Se baja por un tramo del GR-88 junto al arroyo Mayor, que se cruza varias veces por pasarelas de madera.</p>
+     <p><strong>Ojo en dos puntos.</strong> En la pradera de la bandera 5 hay que dejar la pista y tomar el camino balizado a la derecha: hay quien sigue recto y pierde la senda. Y atentos también en el cruce de la bandera 19. Llevamos el track en el móvil.</p>
+     <p style="color:var(--muted);font-size:14px;margin-bottom:0">Datos y descripción del autor de la ruta en Wikiloc.</p>`},
+   extra:`<div class="mapimg"><iframe loading="lazy" src="https://es.wikiloc.com/wikiloc/embedv2.do?id=122300943&elevation=on&images=on&maptype=H" title="Mapa de la Senda de la Peña del Águila en Wikiloc"></iframe></div>`},
+  {time:"10:45", tag:"Coche", title:"Hacia Madrid", q:"Madrid", from:TRAILHEAD, map:false,
+   desc:"Desde el inicio de la ruta, por la A-6. Unos 50 a 60 minutos según a qué parte de Madrid vayamos."},
+  {time:"Mediodía", tag:"Comida", title:"Comida en Madrid", desc:"Lo decidimos por el camino."},
+  {time:"Tarde", tag:"Coche", title:"Vuelta a Zaragoza", q:"Zaragoza", from:"Madrid", map:false,
+   desc:"Unas 3 horas por la A-2."}
+];
+
+const SPA = [
+  {o:"Circuito", inc:"Circuito de aguas para dos, aproximadamente 1 hora", p:"Unos 50 € los dos"},
+  {o:"Circuito y masaje en pareja", rec:true, inc:"Circuito y 20 o 30 minutos de masaje", p:"100 a 130 € los dos"},
+  {o:"VIP u oferta parejas", inc:"Uso más exclusivo; falta confirmar qué incluye", p:"72,50 € por persona, u 80 € la oferta"}
+];
+
+[WX_A, WX_A, WX_A, WX_B, WX_B, WX_C, WX_D, WX_D].forEach((w, i) => { if (SAT[i]) SAT[i].wx = w; });
+[WX_E, WX_F, WX_G, WX_H].forEach((w, i) => { if (SUN[i]) SUN[i].wx = w; });
+render("sat", SAT); render("sun", SUN);
+
+// ancla para el menú
+document.querySelectorAll("#sat .item")[4].id = "segovia";
+
+document.getElementById("hotel-links").innerHTML = mapBtns(HOTEL, "Zaragoza");
+document.getElementById("hotel-links2").innerHTML = mapBtns(HOTEL, "Zaragoza") + tel("921 17 14 12");
+document.getElementById("sat-route").innerHTML = b("dir", dir(PARK, HOTEL), "Abrir en Google Maps");
+document.getElementById("spa-rows").innerHTML = SPA.map(s => `<tr${s.rec ? ' class="rec"' : ""}><td><strong>${s.o}</strong>${s.rec ? '<span class="pill pill-rec">Nuestra elección</span>' : ""}</td><td data-label="Qué incluye">${s.inc}</td><td class="price" data-label="Precio">${s.p}</td></tr>`).join("");
+document.getElementById("spa-links").innerHTML = b("web","https://www.eurostarshotels.com/aurea-convento-capuchinos/spa.html","Web del spa") + mapBtns("Spa Spaxión Áurea Convento Capuchinos, Segovia") + tel("921 051 477");
+
+// Botón volver arriba
+const totop = document.getElementById("totop");
+addEventListener("scroll", () => totop.classList.toggle("show", scrollY > 900), {passive:true});
+totop.addEventListener("click", () => scrollTo({top:0}));
+
+// Menú: marca la sección visible y la mantiene a la vista
+const navLinks = [...document.querySelectorAll("nav a")];
+const targets = navLinks.map(a => document.querySelector(a.getAttribute("href"))).filter(Boolean);
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    navLinks.forEach(a => {
+      const on = a.getAttribute("href") === "#" + e.target.id;
+      a.classList.toggle("active", on);
+      if (on) { const w = a.parentElement; w.scrollTo({left: a.offsetLeft - w.clientWidth/2 + a.offsetWidth/2, behavior:"smooth"}); }
+    });
+  });
+}, {rootMargin:"-45% 0px -50% 0px"});
+targets.forEach(t => io.observe(t));
+
+// Mapas pequeños: solo se cargan al abrirlos
+document.querySelectorAll("details.mini").forEach(d => d.addEventListener("toggle", () => {
+  const f = d.querySelector("iframe");
+  if (d.open && !f.src) f.src = f.dataset.src;
+}));
+</script>
+</body>
+</html>
