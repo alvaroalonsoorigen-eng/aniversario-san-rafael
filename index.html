@@ -278,6 +278,20 @@
   .journey-steps i{background:#f3dfbf;transform:scaleX(0);transform-origin:left}
   .journey-credit{position:absolute;z-index:5;left:5%;right:5%;bottom:calc(16px + env(safe-area-inset-bottom));color:rgba(255,255,255,.5);margin:0}
 
+  .plan-switch{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:6px;margin:0 0 22px}
+  .plan-switch button{appearance:none;-webkit-appearance:none;border:0;background:transparent;border-radius:12px;padding:10px 14px;font:600 14px/1.3 var(--sans);color:var(--muted);cursor:pointer;text-align:left;min-height:54px;transition:background .15s,color .15s}
+  .plan-switch button small{display:block;font-weight:400;font-size:12.5px;margin-top:2px}
+  .plan-switch button.on{background:#fff;color:var(--pine);box-shadow:0 2px 10px rgba(38,42,46,.08)}
+  .plan-tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--pine);border-radius:999px;padding:4px 10px;margin:8px 0 8px}
+  .plan-tag.sec{background:var(--sand);margin-top:32px}
+  .h3s{font-family:var(--serif);font-weight:400;font-size:24px;margin:0 0 12px}
+  .glance-alt{margin-top:6px!important;font-size:13px!important}
+  details.why{margin:-6px 0 20px}
+  details.why .box{margin-top:10px}
+  ul.compare{list-style:none;padding:0;margin:8px 0 12px}
+  ul.compare li{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid var(--line)}
+  ul.compare li:first-child b{color:var(--pine)}
+  ul.compare span{color:var(--muted);white-space:nowrap}
   .intro{padding:40px 0 8px;background:var(--paper);border-bottom:1px solid var(--line)}
   .intro .eyebrow{margin-bottom:4px}
   .intro .glance{margin-top:18px;margin-bottom:28px}
@@ -340,9 +354,9 @@
   <div class="hero-content" id="heroContent">
     <p class="hero-kicker">28 y 29 de noviembre de 2026</p>
     <h1>Nuestro aniversario<br>en <em>San Rafael</em></h1>
-    <p class="hero-lead">Segovia al atardecer, un spa en un convento y una mañana entre pinos. Un fin de semana para los dos.</p>
+    <p class="hero-lead">El Escorial al atardecer, un spa entre robles y una mañana en la sierra. Un fin de semana para los dos.</p>
     <div class="hero-chips">
-      <span>Suite Venus</span><span>Segovia</span><span>Spa</span><span>Sierra</span>
+      <span>Suite Venus</span><span>El Escorial</span><span>Spa</span><span>Sierra</span>
     </div>
   </div>
   <a class="hero-cue" href="#viaje" aria-label="Bajar al plan"><span>Desliza</span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
@@ -353,21 +367,21 @@
   <div class="journey-stage">
     <div class="journey-window">
       <article class="journey-scene">
-        <picture><source media="(max-width:680px)" srcset="img/alcazar-movil.webp"><img src="img/alcazar-1920.webp" alt="El Alcázar de Segovia sobre la roca, con los árboles en otoño" decoding="async"></picture>
-        <span class="journey-word" aria-hidden="true">Segovia</span>
+        <picture><source media="(max-width:680px)" srcset="img/esc_noche-movil.webp"><img src="img/esc_noche-1920.webp" alt="El monasterio de El Escorial iluminado al anochecer, entre el bosque" decoding="async"></picture>
+        <span class="journey-word" aria-hidden="true">Escorial</span>
         <div class="journey-caption">
           <span class="journey-eyebrow">01 / Sábado por la tarde</span>
-          <h2>Pasear<br><em>sin reloj.</em></h2>
-          <p>La Judería, el Alcázar y el acueducto encendiéndose al anochecer.</p>
+          <h2>Piedra<br><em>y silencio.</em></h2>
+          <p>El monasterio, el pueblo y un café en la calle Floridablanca.</p>
         </div>
       </article>
       <article class="journey-scene" aria-hidden="true">
-        <picture><source media="(max-width:680px)" srcset="img/convento-movil.webp"><img src="img/convento-1920.webp" alt="Fachada del antiguo convento de los Capuchinos de Segovia, donde está el spa" decoding="async"></picture>
-        <span class="journey-word" aria-hidden="true">Calma</span>
+        <picture><source media="(max-width:680px)" srcset="img/esc_silla_vista-movil.webp"><img src="img/esc_silla_vista-1920.webp" alt="El monasterio y el pueblo de San Lorenzo vistos desde la Silla de Felipe II" decoding="async"></picture>
+        <span class="journey-word" aria-hidden="true">Ocaso</span>
         <div class="journey-caption">
-          <span class="journey-eyebrow">02 / Sábado por la noche</span>
-          <h2>Un convento<br><em>para los dos.</em></h2>
-          <p>Aguas, masaje en pareja y cena tranquila al volver.</p>
+          <span class="journey-eyebrow">02 / Sábado al caer el sol</span>
+          <h2>El mirador<br><em>de un rey.</em></h2>
+          <p>La Silla de Felipe II y, después, un spa para los dos entre robles.</p>
         </div>
       </article>
       <article class="journey-scene" aria-hidden="true">
@@ -383,9 +397,9 @@
     <div class="journey-topline"><span>Un fin de semana. Los dos.</span><a href="#resumen" class="journey-skip">Ir al plan <span aria-hidden="true">↓</span></a></div>
     <div class="journey-bottomline" aria-hidden="true">
       <span class="journey-count">01 / 03</span>
-      <div class="journey-steps"><span><i></i>Segovia</span><span><i></i>Spa</span><span><i></i>Sierra</span></div>
+      <div class="journey-steps"><span><i></i>Escorial</span><span><i></i>Ocaso</span><span><i></i>Sierra</span></div>
     </div>
-    <p class="photo-credit journey-credit" aria-hidden="true">Fotos: Antonio Sánchez Corbalán, Mdeazpeitia y Rowanwindwhistler, CC BY-SA 4.0, Wikimedia Commons</p>
+    <p class="photo-credit journey-credit" aria-hidden="true">Fotos: Malopez 21, Francesco Bini y Rowanwindwhistler, CC BY-SA 4.0, Wikimedia Commons</p>
   </div>
 </section>
 
@@ -396,7 +410,8 @@
     <div class="glance">
       <div>
         <h4>Sábado</h4>
-        <p><b>13:00</b> llegada · <b>13:30</b> comida cerca · <b>15:00</b> check-in · <b>16:00 a 18:45</b> Segovia a nuestro aire · <b>19:00</b> spa · <b>21:15</b> cena</p>
+        <p><b>13:00</b> llegada · <b>13:30</b> comida cerca · <b>15:00</b> check-in · <b>16:00 a 18:15</b> San Lorenzo de El Escorial y atardecer en la Silla de Felipe II · <b>19:00</b> spa en Navacerrada · <b>21:15</b> cena</p>
+        <p class="glance-alt">Plan secundario: Segovia, con su spa en un convento.</p>
       </div>
       <div>
         <h4>Domingo</h4>
@@ -411,7 +426,8 @@
   <div class="wrap">
     <a href="#alojamiento">Alojamiento</a>
     <a href="#sabado">Sábado</a>
-    <a href="#segovia">Segovia</a>
+    <a href="#escorial">El Escorial</a>
+    <a href="#sabado" data-plan="seg">Plan Segovia</a>
     <a href="#domingo">Domingo</a>
     <a href="#spa">Spa</a>
     <a href="#reservas">Reservas</a>
@@ -441,19 +457,56 @@
 
   <section id="sabado">
     <h2>Sábado 28</h2>
-    <p class="sub">Segovia está a unos 25 minutos, lo único que pasa un poco de los 20.</p>
-    <div class="daywx">
-      <div><span>San Rafael</span><b>2°</b> mín · <b>11°</b> máx</div>
-      <div><span>Segovia</span><b>3°</b> mín · <b>11°</b> máx</div>
-      <div><span>Cielo</span>Soleado con nubes altas, nublado por la noche. Sin lluvia</div>
+    <p class="sub">Dos planes para la tarde. El principal es El Escorial; Segovia queda como alternativa.</p>
+    <div class="plan-switch" role="tablist" aria-label="Elegir plan del sábado">
+      <button type="button" role="tab" class="on" aria-selected="true" data-plan="esc">Plan principal<small>San Lorenzo de El Escorial</small></button>
+      <button type="button" role="tab" aria-selected="false" data-plan="seg">Plan secundario<small>Segovia</small></button>
     </div>
-    <div class="routebox">
-      <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps?saddr=San+Rafael,+Segovia&daddr=Avenida+Padre+Claret,+Segovia&output=embed"
-        title="Ruta de San Rafael a Segovia"></iframe>
-      <div class="bar"><span>San Rafael a Segovia, hasta el aparcamiento</span><span id="sat-route"></span></div>
+
+    <div class="plan" data-plan="esc" id="plan-esc">
+      <div class="daywx">
+        <div><span>San Rafael</span><b>2°</b> mín · <b>11°</b> máx</div>
+        <div><span>San Lorenzo</span><b>3°</b> mín · <b>9°</b> máx</div>
+        <div><span>Cielo</span>Nubes y claros, nublado por la noche. Sin lluvia</div>
+      </div>
+      <details class="why">
+        <summary>Por qué El Escorial y no otros pueblos</summary>
+        <div class="box">
+          <p>Tiempo en coche desde el alojamiento, calculado sin tráfico con el motor de rutas de OpenStreetMap (suele dar algo más que Google Maps):</p>
+          <ul class="compare">
+            <li><b>San Lorenzo de El Escorial</b><span>29 min</span></li>
+            <li><b>Cercedilla</b><span>31 min</span></li>
+            <li><b>Segovia</b><span>32 min</span></li>
+            <li><b>La Granja de San Ildefonso</b><span>39 min</span></li>
+            <li><b>Patones de Arriba</b><span>casi 2 h</span></li>
+          </ul>
+          <p><strong>El Escorial</strong> lo junta todo a media hora: un monumento de primera, un pueblo bonito para pasear, el mejor atardecer de la sierra en la Silla de Felipe II y un spa de calidad en Navacerrada, de camino a casa.</p>
+          <p><strong>Cercedilla</strong> es más de montaña que de pueblo con encanto. <strong>La Granja</strong> merece la pena, pero está más lejos y su palacio cierra a las 18:00. <strong>Patones de Arriba</strong> queda descartado: está a casi dos horas.</p>
+        </div>
+      </details>
+      <div class="routebox">
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?saddr=San+Rafael,+Segovia&daddr=Estaci%C3%B3n+de+autobuses,+San+Lorenzo+de+El+Escorial&output=embed"
+          title="Ruta de San Rafael a San Lorenzo de El Escorial"></iframe>
+        <div class="bar"><span>San Rafael a San Lorenzo, hasta el aparcamiento</span><span id="sat-route"></span></div>
+      </div>
+      <div class="timeline" id="sat"></div>
     </div>
-    <div class="timeline" id="sat"></div>
+
+    <div class="plan" data-plan="seg" id="plan-seg" hidden>
+      <div class="daywx">
+        <div><span>San Rafael</span><b>2°</b> mín · <b>11°</b> máx</div>
+        <div><span>Segovia</span><b>3°</b> mín · <b>11°</b> máx</div>
+        <div><span>Cielo</span>Soleado con nubes altas, nublado por la noche. Sin lluvia</div>
+      </div>
+      <div class="routebox">
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?saddr=San+Rafael,+Segovia&daddr=Avenida+Padre+Claret,+Segovia&output=embed"
+          title="Ruta de San Rafael a Segovia"></iframe>
+        <div class="bar"><span>San Rafael a Segovia, hasta el aparcamiento</span><span id="seg-route"></span></div>
+      </div>
+      <div class="timeline" id="satSeg"></div>
+    </div>
   </section>
 
   <section id="domingo">
@@ -470,9 +523,11 @@
   </section>
 
   <section id="spa">
-    <h2>Spa Spaxión</h2>
-    <figure class="photo-banner scroll-photo photo"><img src="img/spa_masaje-1280.webp" srcset="img/spa_masaje-640.webp 640w, img/spa_masaje-1280.webp 1280w" sizes="(max-width:680px) 92vw, 880px" width="1280" height="853" alt="La cabina de masaje para dos del spa Spaxión" loading="lazy" decoding="async"><figcaption class="photo-credit">Cabina de masaje en pareja. Foto: Áurea Hotels</figcaption></figure>
-    <p class="sub">Áurea Convento Capuchinos, Segovia. Precios orientativos de webs de reserva y guías: los confirmamos al reservar.</p>
+    <h2>Spa</h2>
+    <p class="plan-tag">Plan principal</p>
+    <h3 class="h3s">Hacienda Los Robles, Navacerrada</h3>
+    <figure class="photo-banner scroll-photo photo"><img src="img/robles_cabina-1280.webp" srcset="img/robles_cabina-640.webp 640w, img/robles_cabina-1280.webp 1280w" sizes="(max-width:680px) 92vw, 880px" width="1280" height="803" alt="Una de las cabinas de tratamiento del spa de Hacienda Los Robles" loading="lazy" decoding="async"><figcaption class="photo-credit">Cabina de tratamientos. Foto: Hacienda Los Robles</figcaption></figure>
+    <p class="sub">Más de 300 m² con luz natural y vistas al jardín. Precios de su web oficial. Reserva previa imprescindible, también para el circuito: el aforo es de 8 a 10 personas.</p>
     <div class="tablewrap">
       <table>
         <thead><tr><th>Modalidad</th><th>Qué incluye</th><th>Precio</th></tr></thead>
@@ -480,16 +535,38 @@
       </table>
     </div>
     <div class="links" id="spa-links"></div>
-    <div class="reco"><strong>Recomendación:</strong> circuito y masaje en pareja, para que sea el plan especial del aniversario. El circuito puede ser compartido con otros clientes.</div>
+    <div class="reco"><strong>Recomendación:</strong> el spa privado para los dos, con cava, fruta y bombones: es nuestro aniversario y lo tenemos para nosotros solos. Si preferimos ahorrar, el circuito normal (80 € los dos). Los masajes en cabina no tienen precio publicado: se consultan al reservar.</div>
+
+    <p class="plan-tag sec">Plan secundario</p>
+    <h3 class="h3s">Spaxión, Áurea Convento Capuchinos (Segovia)</h3>
+    <figure class="photo-banner scroll-photo photo"><img src="img/spa_masaje-1280.webp" srcset="img/spa_masaje-640.webp 640w, img/spa_masaje-1280.webp 1280w" sizes="(max-width:680px) 92vw, 880px" width="1280" height="853" alt="La cabina de masaje para dos del spa Spaxión" loading="lazy" decoding="async"><figcaption class="photo-credit">Cabina de masaje en pareja. Foto: Áurea Hotels</figcaption></figure>
+    <p class="sub">Precios orientativos de webs de reserva y guías: los confirmamos al reservar.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Modalidad</th><th>Qué incluye</th><th>Precio</th></tr></thead>
+        <tbody id="spa-rows-seg"></tbody>
+      </table>
+    </div>
+    <div class="links" id="spa-links-seg"></div>
+    <div class="reco"><strong>Recomendación:</strong> circuito y masaje en pareja. El circuito puede ser compartido con otros clientes.</div>
   </section>
 
   <section id="reservas">
     <h2>Reservas que conviene hacer ya</h2>
-    <p class="sub">Con un fin de semana de finales de noviembre, mejor no dejarlo para el viernes.</p>
+    <p class="sub">Con un fin de semana de finales de noviembre, mejor no dejarlo para el viernes. Ninguna está hecha todavía.</p>
+    <p class="plan-tag">Plan principal: El Escorial</p>
     <ol class="check">
-      <li><strong>Comida del sábado, 13:30, cerca del alojamiento.</strong> El Espino, <a href="tel:+34921182360">921 182 360</a>, o Los Jardines de la Brasería, <a href="tel:+34921171790">921 171 790</a>. Si al final preferimos Segovia, a las 14:00 o 14:30: Casa Comala o Mesón Don Sancho, los dos en <a href="https://www.opentable.es/r/casa-comala-segovia?covers=2&dateTime=2026-11-28T14%3A00" target="_blank" rel="noopener">OpenTable</a>.</li>
+      <li><strong>Comida del sábado, 13:30, cerca del alojamiento.</strong> El Espino, <a href="tel:+34921182360">921 182 360</a>, o Los Jardines de la Brasería, <a href="tel:+34921171790">921 171 790</a>. Si preferimos comer en San Lorenzo, a las 14:00 o 14:30: Genara en <a href="https://www.opentable.es/r/genara-san-lorenzo-de-el-escorial?covers=2&dateTime=2026-11-28T14%3A00" target="_blank" rel="noopener">OpenTable</a> o Cantina Virgilio en <a href="https://www.thefork.es/restaurante/cantina-virgilio-r838163" target="_blank" rel="noopener">TheFork</a>.</li>
+      <li><strong>Spa del sábado, de 19:00 a 20:30.</strong> Hacienda Los Robles: línea del spa <a href="tel:+34918535328">91 853 53 28</a>, <a href="https://wa.me/34645514440" target="_blank" rel="noopener">WhatsApp 645 514 440</a> o <a href="mailto:spa@haciendalosrobles.com">spa@haciendalosrobles.com</a>. Pedimos el spa privado para dos.</li>
+      <li><strong>Cena del sábado, 21:15.</strong> El Bistró de Jaime (teléfono en su ficha de Google Maps).</li>
+      <li><strong>Opcional: entrada al monasterio</strong>, si queremos verlo por dentro, en la <a href="https://tickets.patrimonionacional.es/en/tickets/san-lorenzo-del-escorial?city=MAD" target="_blank" rel="noopener">web de Patrimonio Nacional</a>.</li>
+    </ol>
+    <p class="plan-tag sec">Plan secundario: Segovia</p>
+    <ol class="check">
+      <li><strong>Comida del sábado.</strong> Cerca del alojamiento, como en el plan principal; o en Segovia a las 14:00 o 14:30: Casa Comala o Mesón Don Sancho, los dos en <a href="https://www.opentable.es/r/casa-comala-segovia?covers=2&dateTime=2026-11-28T14%3A00" target="_blank" rel="noopener">OpenTable</a>.</li>
       <li><strong>Spa del sábado, 19:00.</strong> Spaxión, <a href="tel:+34921051477">921 051 477</a> o en su <a href="https://www.eurostarshotels.com/aurea-convento-capuchinos/spa.html" target="_blank" rel="noopener">web</a>.</li>
-      <li><strong>Cena del sábado, 21:15.</strong> El Bistró de Jaime (teléfono en su ficha de Google Maps).</li>    </ol>
+      <li><strong>Cena del sábado, 21:15.</strong> El Bistró de Jaime.</li>
+    </ol>
   </section>
 
 </main>
@@ -532,6 +609,8 @@ const WX_E = {i:"nubes", t:5,  w:3,  s:"Cubierto", r:"Sin lluvia"};
 const WX_F = {i:"nubes", t:6,  w:4,  s:"Cubierto, a 1.450 m", r:"Sin lluvia ni nieve"};
 const WX_G = {i:"nubes", t:8,  w:4,  s:"Cubierto", r:"Sin lluvia"};
 const WX_H = {i:"nubes", t:10, w:2,  s:"Cubierto, en Madrid", r:"Sin lluvia"};
+const WX_ESC = {i:"mixto", t:7, w:5, s:"Nubes y claros; se cubre al anochecer", r:"Sin lluvia"};
+const WX_ROBLES = {i:"nubes", t:6, w:4, s:"Nublado, en Navacerrada", r:"Sin lluvia"};
 const windTxt = w => w < 6 ? `casi en calma (${w} km/h)` : `flojo (${w} km/h)`;
 const wxHTML = x => `<div class="wx"><div class="wx-main"><span class="wx-i">${ICONS[x.i]}</span><span class="wx-t">${x.t} °C</span><span class="wx-s">${x.s}</span></div><div class="wx-sub">Viento ${windTxt(x.w)} · ${x.r}</div></div>`;
 
@@ -581,10 +660,10 @@ const STOPS = [
    hist:"<p>Es <strong>romano</strong>, de finales del siglo I o principios del II, probablemente de la época de Trajano. Traía el agua del río Frío desde la sierra a lo largo de unos 15 km, y siguió funcionando hasta tiempos modernos.</p><p>Tiene <strong>167 arcos</strong> y en el Azoguejo alcanza unos 28 metros de altura. Está hecho con unos 20.000 sillares de granito <strong>sin argamasa</strong>: se sostiene por el equilibrio de las piedras. En 1985 la ciudad vieja y el acueducto se declararon Patrimonio de la Humanidad.</p><p>La leyenda dice que lo levantó el diablo en una noche, a cambio del alma de una aguadora cansada de subir agua. Ella rezó, el gallo cantó antes de que colocara la última piedra y se salvó. Los agujeros de los sillares serían las huellas de sus dedos; en realidad son de las tenazas de los canteros romanos. <em>Azoguejo</em> significa \"pequeño zoco\": era la plaza del mercado.</p>"}
 ];
 
-const stopsHTML = `
+const stopsHTML = list => `
   <details class="reveal">
     <summary><span class="reveal-pill"><span class="lbl-closed">Pulsa para descubrir el plan</span><span class="lbl-open">Plegar el plan</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
-  <div class="stops">${STOPS.map(s => `
+  <div class="stops">${list.map(s => `
     <div class="stop">
       ${s.photo ? photoHTML(s.photo) : ""}
       <h4>${s.name}${s.pill ? `<span class="pill">${s.pill}</span>` : ""}</h4>
@@ -597,7 +676,7 @@ const stopsHTML = `
 
 const walkRoute = "https://www.google.com/maps/dir/?api=1&origin=" + encodeURIComponent(PARK) + "&destination=" + encodeURIComponent("Acueducto de Segovia, Plaza del Azoguejo") + "&waypoints=" + ["Calle Judería Vieja, Segovia", "Catedral de Segovia", "Alcázar de Segovia", "Mirador de la Pradera de San Marcos, Segovia", "Plaza de Medina del Campo, Segovia"].map(encodeURIComponent).join("%7C") + "&travelmode=walking";
 
-const SAT = [
+const SAT_SEG = [
   {time:"13:00", tag:"Llegada", photo:{src:"img/fachada.webp", alt:"La casa de piedra de Luxury Suites El Encanto del Pinar, entre pinos", credit:"Luxury Suites El Encanto del Pinar. Foto del alojamiento"}, title:"Llegada a San Rafael", q:HOTEL, dir:false,
    desc:"El check-in es a partir de las 14:00, así que a esta hora todavía no tenemos habitación. Si queremos, llamamos al alojamiento (<a href=\"tel:+34921171412\">921 17 14 12</a>) para dejar las maletas; si no, se quedan en el coche y entramos después de comer."},
   {time:"13:30", tag:"Comida", title:"Comida cerca del alojamiento", map:false,
@@ -635,7 +714,7 @@ const SAT = [
   {time:"16:00", tag:"Segovia", title:"Segovia, a nuestro aire", feature:true, id:"segovia", map:false,
    photo:{src:"img/alcazar_pan.webp", alt:"Segovia con el Alcázar y la sierra nevada al fondo", credit:"Foto: Luis Antonio Fernández Corral, CC BY 2.0, Wikimedia Commons"},
    desc:"De 16:00 a 18:45, sin horas: paseo y atardecer. Las paradas van en orden para que el recorrido salga solo; paramos donde nos apetezca y nos saltamos lo que sobre. Todo andando.",
-   extra: `<a class="routecta" target="_blank" rel="noopener" href="${walkRoute}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4l-5 2v14l5-2 6 2 5-2V4l-5 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>Ver la ruta del paseo en Google Maps</a>` + stopsHTML},
+   extra: `<a class="routecta" target="_blank" rel="noopener" href="${walkRoute}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4l-5 2v14l5-2 6 2 5-2V4l-5 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>Ver la ruta del paseo en Google Maps</a>` + stopsHTML(STOPS)},
   {time:"19:00", tag:"Spa", photo:{src:"img/spa_piscina.webp", alt:"La piscina del circuito de aguas del spa Spaxión", credit:"Piscina del spa. Foto: Áurea Hotels"}, title:"Spa Spaxión, Áurea Convento Capuchinos", q:"Spa Spaxión Áurea Convento Capuchinos, Segovia", from:"Acueducto de Segovia", mode:"walking", tel:"921 051 477",
    webs:[["Web del spa","https://www.eurostarshotels.com/aurea-convento-capuchinos/spa.html"],["Modalidades y precios","#spa"]],
    desc:"En un antiguo convento de la parte alta del casco, junto a la plaza de Capuchinos. Desde el acueducto se sube andando, unos 10 a 15 minutos en cuesta (cálculo aproximado). Vamos a pie: está dentro de la muralla."},
@@ -644,6 +723,73 @@ const SAT = [
   {time:"21:15", tag:"Cena", title:"El Bistró de Jaime", q:"El Bistró de Jaime, Travesía Alto del León 17, San Rafael, Segovia",
    webs:[["Opiniones","https://gastroranking.es/r/el-bistro-de-jaime_219460/"]],
    desc:"Al lado del alojamiento, sin coger el coche de noche. Un 9,2 en Google. Precio sin confirmar: lo preguntamos al reservar."}
+];
+
+
+/* ---------- Plan principal: San Lorenzo de El Escorial ---------- */
+const PARK_ESC = "Estación de autobuses, Calle Juan de Toledo, San Lorenzo de El Escorial";
+const SILLA = "Silla de Felipe II, San Lorenzo de El Escorial";
+const ROBLES = "Hotel Rural Spa & Wellness Hacienda Los Robles, Avenida de Madrid 27, Navacerrada";
+const walkRouteEsc = "https://www.google.com/maps/dir/?api=1&origin=" + encodeURIComponent(PARK_ESC) + "&destination=" + encodeURIComponent("Real Coliseo de Carlos III, San Lorenzo de El Escorial") + "&waypoints=" + encodeURIComponent("Lonja del Monasterio de El Escorial") + "&travelmode=walking";
+
+const STOPS_ESC = [
+  {name:"La Lonja y el Monasterio", q:"Real Monasterio de San Lorenzo de El Escorial",
+   photo:{src:"img/esc_fachada.webp", alt:"El monasterio de El Escorial visto desde el noroeste, sobre la Lonja", credit:"Foto: Ввласенко, CC BY-SA 3.0, Wikimedia Commons"},
+   hint:"A unos 5 minutos andando del coche. La Lonja es la gran explanada de granito que rodea el monasterio por el norte y el oeste. Si queremos entrar: el sábado abre de 10:00 a 18:00, la última entrada es hacia las 17:00 (alguna fuente dice 16:45) y cuesta 14 € por persona; mejor con la entrada comprada en la web. Con una hora vemos la basílica, el Panteón de Reyes y la biblioteca.",
+   webs:[["Entradas oficiales","https://tickets.patrimonionacional.es/en/tickets/san-lorenzo-del-escorial?city=MAD"]],
+   hist:"<p>Felipe II lo mandó levantar para celebrar la victoria de <strong>San Quintín</strong>, ganada el 10 de agosto de 1557, día de San Lorenzo, y como panteón para su padre, Carlos V. Las obras empezaron en <strong>1563</strong> con Juan Bautista de Toledo y las terminó <strong>Juan de Herrera</strong> en <strong>1584</strong>: apenas 21 años para un edificio enorme, hecho con el granito de la propia sierra.</p><p>Es a la vez monasterio, basílica, palacio, biblioteca y <strong>panteón de los reyes de España</strong>. Dice la tradición que su planta imita la parrilla en la que martirizaron a San Lorenzo, aunque no hay prueba de que fuera la intención. Es Patrimonio de la Humanidad desde 1984. Frente a la Lonja están las Casas de Oficios, también de Herrera, donde vivían los servidores de la corte.</p>"},
+  {name:"Calle Floridablanca y el Real Coliseo", q:"Real Coliseo de Carlos III, San Lorenzo de El Escorial",
+   photo:{src:"img/esc_coliseo.webp", alt:"La fachada del Real Coliseo de Carlos III, con su balcón corrido", credit:"Foto: Dorieo, CC BY-SA 4.0, Wikimedia Commons"},
+   hint:"A unos 5 minutos de la Lonja. La calle principal del pueblo, con terrazas y tiendas: buen sitio para un café antes de subir a la Silla.",
+   hist:"<p>Cuando <strong>Carlos III</strong> convirtió El Escorial en residencia de otoño de la corte, hacía falta con qué entretenerse. En <strong>1771</strong> el arquitecto francés <strong>Jaime Marquet</strong> levantó el Real Coliseo, uno de los teatros de corte más antiguos de España que siguen en uso.</p><p>Alrededor creció el pueblo dieciochesco que paseamos hoy: casas para la nobleza y los empleados de palacio, con la calle Floridablanca como eje.</p>"},
+  {name:"Atardecer en la Silla de Felipe II", pill:"sol hacia las 17:50", q:SILLA,
+   photo:{src:"img/esc_silla.webp", alt:"Los escalones tallados en la roca de la Silla de Felipe II, con la sierra detrás", credit:"Foto: Francesco Bini, CC BY-SA 4.0, Wikimedia Commons"},
+   hint:"Volvemos al coche y subimos: unos 5 minutos hasta el aparcamiento del mirador, que es gratis, y unos minutos andando entre rocas. Conviene estar arriba hacia las 17:30. Es el único momento del plan con reloj.",
+   webs:[["Cómo llegar en coche", dir(SILLA, PARK_ESC)],["Info de turismo","https://www.visitmadrid.es/silla-felipe-ii-mirador-historico-san-lorenzo-escorial"]],
+   hist:"<p>Es un asiento con escalones tallado en un gran bloque de granito, en el bosque de La Herrería, a unos 3 km del monasterio. La tradición dice que desde aquí <strong>Felipe II vigilaba las obras</strong>. Los historiadores creen que en realidad es mucho más antiguo: probablemente un <strong>altar de los vetones</strong>, el pueblo prerromano de la zona.</p><p>Al atardecer se ve el monasterio entero, con el pueblo detrás y la llanura de Madrid al fondo.</p>"}
+];
+
+const COMIDA_CERCA = SAT_SEG[1].extra.split('<details><summary>Opción secundaria')[0];
+
+const SAT_ESC = [
+  SAT_SEG[0],
+  {...SAT_SEG[1], desc:"La opción principal: comer tranquilos aquí al lado, sin prisas por llegar a San Lorenzo ni buscar aparcamiento con hambre. Ninguno está reservado todavía.",
+   extra: COMIDA_CERCA + `<details><summary>Opción secundaria: comer en San Lorenzo</summary>
+       <div class="box"><div class="box-t">Dos opciones con reserva online</div>
+         <p>Salimos hacia San Lorenzo a las 13:30, aparcamos hacia las 14:00 y comemos a las 14:00 o 14:30. El 25 de noviembre, en su página de reservas, había mesa para 2 el sábado 28 a esas horas; puede cambiar hasta que reservemos. En este caso, el check-in lo hacemos a la vuelta, antes de cenar (la recepción abre hasta las 23:30).</p>
+         <div class="opt"><p><strong>Genara</strong>, plaza de San Lorenzo 2, dentro del edificio del Real Coliseo de Carlos III, en la galería de la antigua botillería. Cocina española tradicional, hasta 30 € según OpenTable. Lleva el nombre de la abuela de uno de los que rehabilitaron el edificio. <strong>Huecos vistos: 13:30, 14:00 y 14:30.</strong></p>
+           <div class="links">${b("dir","https://www.opentable.es/r/genara-san-lorenzo-de-el-escorial?covers=2&dateTime=2026-11-28T14%3A00","Reservar en OpenTable")}${mapBtns("Genara, Plaza San Lorenzo 2, San Lorenzo de El Escorial", PARK_ESC, "walking")}${tel("622 61 14 54")}</div></div>
+         <div class="opt"><p><strong>Cantina Virgilio</strong>, calle Mariano Benavente 1. Cocina de fusión mexicana, 19 € de precio medio y 8,7 sobre 96 opiniones en TheFork. Más informal. <strong>Huecos vistos: de 13:00 a 14:30, cada cuarto de hora.</strong></p>
+           <div class="links">${b("dir","https://www.thefork.es/restaurante/cantina-virgilio-r838163","Reservar en TheFork")}${mapBtns("Cantina Virgilio, Calle Mariano Benavente 1, San Lorenzo de El Escorial", PARK_ESC, "walking")}</div></div>
+         <p style="margin-top:10px;font-size:14px;color:var(--muted)">También miramos La Yesca Taberna (9,5 en TheFork), que solo tenía mesa a las 13:00, 13:30, 15:00 o 15:30, y Mesón La Cueva, solo a las 13:00.</p>
+       </div></details>`},
+  {...SAT_SEG[2], desc:"Al volver de comer: dejamos las maletas, vemos la suite y salimos hacia San Lorenzo. Datos de la reserva en la sección <a href=\"#alojamiento\">Alojamiento</a>."},
+  {time:"15:30", tag:"Coche", title:"A San Lorenzo y aparcar gratis", q:PARK_ESC, from:HOTEL,
+   webs:[["Guía para aparcar","https://gurutravel.es/aparcamientos-parkings/donde-aparcar-madrid/donde-aparcar-san-lorenzo-escorial/"]],
+   desc:"Unos 25 km, alrededor de media hora. <strong>Ojo: aquí la zona azul del entorno del monasterio se paga todos los días de 9:30 a 19:00</strong>, también el sábado por la tarde. Por eso dejamos el coche en zona blanca, gratis, a unos 5 minutos andando. En el navegador ponemos la estación de autobuses.",
+   box:{t:"Dónde dejar el coche, por orden", html:`
+     <div class="opt"><p><strong>1. Junto a la estación de autobuses</strong>, en la calle Juan de Toledo. Zona blanca, gratis, a unos 5 minutos a pie del monasterio.</p>
+       <div class="links">${mapBtns(PARK_ESC, HOTEL)}</div></div>
+     <div class="opt"><p><strong>2. Resto de la calle Juan de Toledo</strong>, también zona blanca, a unos 10 minutos andando.</p>
+       <div class="links">${mapBtns("Calle Juan de Toledo, San Lorenzo de El Escorial", HOTEL)}</div></div>
+     <div class="opt"><p><strong>3. Zona azul comercial</strong> (no la turística): el sábado solo se paga de 9:00 a 15:00, así que por la tarde es gratis. Hay que mirar bien el cartel, porque la zona turística sí se paga.</p>
+       <p><strong>Si todo está lleno:</strong> parking Iberpark Monasterio, de pago, a unos 3 minutos del monasterio. <strong>En la Silla de Felipe II</strong> el aparcamiento es gratis.</p></div>`}},
+  {time:"16:00", tag:"El Escorial", title:"San Lorenzo, a nuestro aire", feature:true, map:false,
+   photo:{src:"img/esc_aereo.webp", alt:"El monasterio de El Escorial y el pueblo de San Lorenzo vistos desde el monte", credit:"Foto: Zvonimir Stamenov, CC BY-SA 4.0, Wikimedia Commons"},
+   desc:"De 16:00 a 18:15, sin horas: monasterio, pueblo y atardecer. Las dos primeras paradas, andando; a la Silla de Felipe II subimos en coche, que está a 5 minutos.",
+   extra: `<a class="routecta" target="_blank" rel="noopener" href="${walkRouteEsc}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4l-5 2v14l5-2 6 2 5-2V4l-5 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>Ver el paseo en Google Maps</a>` + stopsHTML(STOPS_ESC)},
+  {time:"19:00", tag:"Spa", photo:{src:"img/robles_piscina.webp", alt:"La piscina dinámica del spa de Hacienda Los Robles, con muros de piedra y vistas al jardín", credit:"Piscina del spa. Foto: Hacienda Los Robles"},
+   title:"Spa Hacienda Los Robles, Navacerrada", q:ROBLES, from:SILLA, tel:"91 853 53 28",
+   webs:[["Web del spa","https://www.haciendalosrobles.com/spa/"],["WhatsApp del spa","https://wa.me/34645514440"],["Modalidades y precios","#spa"]],
+   desc:"Salimos de la Silla hacia las 18:15: unos 25 minutos hasta Navacerrada. Piscina a 36 °C con chorros, cascada y jacuzzi, sauna finlandesa, baño turco y hamacas con vistas al jardín. El sábado abre de 15:30 a 21:00 y solo con cita previa: reservamos de 19:00 a 20:30. Bañador obligatorio; gorro, chanclas y toalla incluidos."},
+  {time:"20:30", tag:"Vuelta", title:"De Navacerrada a San Rafael", q:HOTEL, from:ROBLES, map:false,
+   desc:"Unos 30 minutos de carretera, ya de noche."},
+  SAT_SEG[SAT_SEG.length - 1]
+];
+
+const SPA_ESC = [
+  {o:"Circuito hidrotermal", inc:"1 h 30 min: piscina dinámica a 36 °C, sauna finlandesa, baño turco, fuente de hielo y ducha de sensaciones. Compartido, con un aforo de 8 a 10 personas", p:"40 € por persona (80 € los dos)"},
+  {o:"Spa privado para dos", rec:true, inc:"1 h 30 min con todo el circuito solo para nosotros, copa de cava, brocheta de frutas y bombones", p:"225 € los dos"}
 ];
 
 const TRAILHEAD = "Calle Arroyo Mayor, San Rafael, Segovia";
@@ -677,18 +823,24 @@ const SPA = [
   {o:"VIP u oferta parejas", inc:"Uso más exclusivo; falta confirmar qué incluye", p:"72,50 € por persona, u 80 € la oferta"}
 ];
 
-[WX_A, WX_A, WX_A, WX_B, WX_B, WX_C, WX_D, WX_D].forEach((w, i) => { if (SAT[i]) SAT[i].wx = w; });
+[WX_A, WX_A, WX_A, WX_B, WX_B, WX_C, WX_D, WX_D].forEach((w, i) => { if (SAT_SEG[i]) SAT_SEG[i].wx = w; });
+[WX_A, WX_A, WX_A, WX_ESC, WX_ESC, WX_ROBLES, WX_D, WX_D].forEach((w, i) => { if (SAT_ESC[i]) SAT_ESC[i] = {...SAT_ESC[i], wx: w}; });
 [WX_E, WX_F, WX_G, WX_H].forEach((w, i) => { if (SUN[i]) SUN[i].wx = w; });
-render("sat", SAT); render("sun", SUN);
+render("sat", SAT_ESC); render("satSeg", SAT_SEG); render("sun", SUN);
 
 // ancla para el menú
-document.querySelectorAll("#sat .item")[4].id = "segovia";
+document.querySelectorAll("#sat .item")[4].id = "escorial";
+document.querySelectorAll("#satSeg .item")[4].id = "segovia";
 
 document.getElementById("hotel-links").innerHTML = mapBtns(HOTEL, "Zaragoza");
 document.getElementById("hotel-links2").innerHTML = mapBtns(HOTEL, "Zaragoza") + tel("921 17 14 12");
-document.getElementById("sat-route").innerHTML = b("dir", dir(PARK, HOTEL), "Abrir en Google Maps");
-document.getElementById("spa-rows").innerHTML = SPA.map(s => `<tr${s.rec ? ' class="rec"' : ""}><td><strong>${s.o}</strong>${s.rec ? '<span class="pill pill-rec">Nuestra elección</span>' : ""}</td><td data-label="Qué incluye">${s.inc}</td><td class="price" data-label="Precio">${s.p}</td></tr>`).join("");
-document.getElementById("spa-links").innerHTML = b("web","https://www.eurostarshotels.com/aurea-convento-capuchinos/spa.html","Web del spa") + mapBtns("Spa Spaxión Áurea Convento Capuchinos, Segovia") + tel("921 051 477");
+document.getElementById("sat-route").innerHTML = b("dir", dir(PARK_ESC, HOTEL), "Abrir en Google Maps");
+document.getElementById("seg-route").innerHTML = b("dir", dir(PARK, HOTEL), "Abrir en Google Maps");
+const spaRow = s => `<tr${s.rec ? ' class="rec"' : ""}><td><strong>${s.o}</strong>${s.rec ? '<span class="pill pill-rec">Nuestra elección</span>' : ""}</td><td data-label="Qué incluye">${s.inc}</td><td class="price" data-label="Precio">${s.p}</td></tr>`;
+document.getElementById("spa-rows").innerHTML = SPA_ESC.map(spaRow).join("");
+document.getElementById("spa-links").innerHTML = b("web","https://www.haciendalosrobles.com/spa/","Web del spa") + mapBtns(ROBLES) + tel("91 853 53 28") + b("web","https://wa.me/34645514440","WhatsApp");
+document.getElementById("spa-rows-seg").innerHTML = SPA.map(s => `<tr${s.rec ? ' class="rec"' : ""}><td><strong>${s.o}</strong>${s.rec ? '<span class="pill pill-rec">Nuestra elección</span>' : ""}</td><td data-label="Qué incluye">${s.inc}</td><td class="price" data-label="Precio">${s.p}</td></tr>`).join("");
+document.getElementById("spa-links-seg").innerHTML = b("web","https://www.eurostarshotels.com/aurea-convento-capuchinos/spa.html","Web del spa") + mapBtns("Spa Spaxión Áurea Convento Capuchinos, Segovia") + tel("921 051 477");
 
 // ---------- Scroll dinámico: hero, recorrido, fotos y tarjetas ----------
 (function scrollMotion(){
@@ -770,6 +922,21 @@ document.getElementById("spa-links").innerHTML = b("web","https://www.eurostarsh
   document.fonts && document.fonts.ready.then(refresh);
   apply();
 })();
+
+// Selector de plan del sábado
+function setPlan(p){
+  document.querySelectorAll(".plan").forEach(x => x.hidden = x.dataset.plan !== p);
+  document.querySelectorAll(".plan-switch button").forEach(x => { const on = x.dataset.plan === p; x.classList.toggle("on", on); x.setAttribute("aria-selected", String(on)); });
+  window.refreshScrollMotion && window.refreshScrollMotion();
+}
+document.querySelectorAll(".plan-switch button").forEach(x => x.addEventListener("click", () => setPlan(x.dataset.plan)));
+function goPlan(e, plan, target){
+  e.preventDefault();
+  setPlan(plan);
+  setTimeout(() => { document.getElementById(target).scrollIntoView({behavior:"smooth"}); history.replaceState(null, "", "#" + target); }, 30);
+}
+document.querySelectorAll('nav a[href="#escorial"]').forEach(a => a.addEventListener("click", e => goPlan(e, "esc", "escorial")));
+document.querySelectorAll("nav a[data-plan]").forEach(a => a.addEventListener("click", e => goPlan(e, a.dataset.plan, "sabado")));
 
 // Botón volver arriba
 const totop = document.getElementById("totop");
