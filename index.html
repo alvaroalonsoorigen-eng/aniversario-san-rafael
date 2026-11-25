@@ -558,7 +558,7 @@
     <ol class="check">
       <li><strong>Comida del sábado en San Lorenzo, 13:30.</strong> La Yesca Taberna en <a href="https://www.thefork.es/restaurante/la-yesca-taberna-r860597" target="_blank" rel="noopener">TheFork</a>, la primera, porque los fines de semana se llena. Si no hay sitio: Genara en <a href="https://www.opentable.es/r/genara-san-lorenzo-de-el-escorial?covers=2&dateTime=2026-11-28T13%3A30" target="_blank" rel="noopener">OpenTable</a> o Cantina Virgilio en <a href="https://www.thefork.es/restaurante/cantina-virgilio-r838163" target="_blank" rel="noopener">TheFork</a>.</li>
       <li><strong>Spa del sábado, de 19:00 a 20:30.</strong> Hacienda Los Robles: línea del spa <a href="tel:+34918535328">91 853 53 28</a>, <a href="https://wa.me/34645514440" target="_blank" rel="noopener">WhatsApp 645 514 440</a> o <a href="mailto:spa@haciendalosrobles.com">spa@haciendalosrobles.com</a>. Pedimos el spa privado para dos.</li>
-      <li><strong>Cena del sábado, 21:30.</strong> El Bistró de Jaime (teléfono en su ficha de Google Maps).</li>
+      <li><strong>Cena del sábado, 21:30.</strong> Plaza, en San Rafael: <a href="https://www.thefork.es/restaurante/plaza-r456285" target="_blank" rel="noopener">TheFork</a> o <a href="tel:+34921172031">921 17 20 31</a>. Si no hay mesa, Los Jardines de la Brasería, <a href="tel:+34921171790">921 171 790</a>.</li>
       <li><strong>Avisar al alojamiento</strong> de que haremos el check-in hacia las 21:00: <a href="tel:+34921171412">921 17 14 12</a>.</li>
       <li><strong>Opcional: entrada al monasterio</strong>, si queremos verlo por dentro, en la <a href="https://tickets.patrimonionacional.es/en/tickets/san-lorenzo-del-escorial?city=MAD" target="_blank" rel="noopener">web de Patrimonio Nacional</a>.</li>
     </ol>
@@ -566,7 +566,7 @@
     <ol class="check">
       <li><strong>Comida del sábado.</strong> Cerca del alojamiento, como en el plan principal; o en Segovia a las 14:00 o 14:30: Casa Comala o Mesón Don Sancho, los dos en <a href="https://www.opentable.es/r/casa-comala-segovia?covers=2&dateTime=2026-11-28T14%3A00" target="_blank" rel="noopener">OpenTable</a>.</li>
       <li><strong>Spa del sábado, 19:00.</strong> Spaxión, <a href="tel:+34921051477">921 051 477</a> o en su <a href="https://www.eurostarshotels.com/aurea-convento-capuchinos/spa.html" target="_blank" rel="noopener">web</a>.</li>
-      <li><strong>Cena del sábado, 21:15.</strong> El Bistró de Jaime.</li>
+      <li><strong>Cena del sábado, 21:15.</strong> Plaza, en San Rafael: <a href="tel:+34921172031">921 17 20 31</a>.</li>
     </ol>
   </section>
 
@@ -722,9 +722,13 @@ const SAT_SEG = [
    desc:"En un antiguo convento de la parte alta del casco, junto a la plaza de Capuchinos. Desde el acueducto se sube andando, unos 10 a 15 minutos en cuesta (cálculo aproximado). Vamos a pie: está dentro de la muralla."},
   {time:"20:15", tag:"Vuelta", title:"Al coche y a San Rafael", q:HOTEL, from:PARK, map:false,
    desc:"Unos 15 minutos andando cuesta abajo hasta el coche y 25 de carretera."},
-  {time:"21:15", tag:"Cena", title:"El Bistró de Jaime", q:"El Bistró de Jaime, Travesía Alto del León 17, San Rafael, Segovia",
-   webs:[["Opiniones","https://gastroranking.es/r/el-bistro-de-jaime_219460/"]],
-   desc:"Al lado del alojamiento, sin coger el coche de noche. Un 9,2 en Google. Precio sin confirmar: lo preguntamos al reservar."}
+  {time:"21:15", tag:"Cena", title:"Cena en Plaza, San Rafael", q:"Plaza Restaurante Hostal, Travesía Alto del León 6, San Rafael, Segovia", from:HOTEL, mode:"walking", tel:"921 17 20 31",
+   webs:[["Reservar en TheFork","https://www.thefork.es/restaurante/plaza-r456285"],["Opiniones","https://gastroranking.es/r/plaza-restaurante-hostal_80730/"]],
+   desc:"En el centro de San Rafael, a pocos minutos andando de la suite: sin coger el coche de noche. 9,3 sobre 191 opiniones en TheFork y 9,2 sobre más de 2.200 en Google, con unos 21 € de precio medio. Cocina española: carnes a la brasa, como el entrecot de vaca madurada, cachopo y cocido. El sábado abre hasta medianoche. Se reserva en TheFork o por teléfono; no he podido ver los huecos de esa hora porque TheFork me bloqueó las consultas, así que conviene reservar ya.",
+   extra:`<div class="box"><div class="box-t">Si no hay mesa</div>
+     <p><strong>Los Jardines de la Brasería</strong>, en la calle Calzada, la misma del alojamiento: se va andando. Ambiente de sierra y especialidad en carnes; 7,9 sobre 572 opiniones, con opiniones recientes de octubre de 2026. No publica horario ni reserva online: hay que llamar.</p>
+     <div class="links">${mapBtns("Los Jardines de la Brasería, San Rafael, Segovia", HOTEL, "walking")}${b("web","https://gastroranking.es/r/los-jardines-de-la-braseria_177132/","Opiniones")}${tel("921 171 790")}</div>
+     <p style="margin-top:10px;font-size:14px;color:var(--muted)">El Bistró de Jaime, que teníamos antes, ha cerrado.</p></div>`}
 ];
 
 
