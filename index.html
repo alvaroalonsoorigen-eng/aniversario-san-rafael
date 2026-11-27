@@ -466,9 +466,9 @@
 
     <div class="plan" data-plan="esc" id="plan-esc">
       <div class="daywx">
-        <div><span>San Rafael</span><b>2°</b> mín · <b>11°</b> máx</div>
-        <div><span>San Lorenzo</span><b>3°</b> mín · <b>9°</b> máx</div>
-        <div><span>Cielo</span>Nubes y claros, nublado por la noche. Sin lluvia</div>
+        <div><span>San Rafael</span><b>3°</b> mín · <b>12°</b> máx</div>
+        <div><span>San Lorenzo</span><b>4°</b> mín · <b>11°</b> máx</div>
+        <div><span>Cielo</span>Nubes altas y claros, nublado por la noche; posible niebla de madrugada. Sin lluvia</div>
       </div>
       <details class="why">
         <summary>Por qué El Escorial y no otros pueblos</summary>
@@ -496,9 +496,9 @@
 
     <div class="plan" data-plan="seg" id="plan-seg" hidden>
       <div class="daywx">
-        <div><span>San Rafael</span><b>2°</b> mín · <b>11°</b> máx</div>
-        <div><span>Segovia</span><b>3°</b> mín · <b>11°</b> máx</div>
-        <div><span>Cielo</span>Soleado con nubes altas, nublado por la noche. Sin lluvia</div>
+        <div><span>San Rafael</span><b>3°</b> mín · <b>12°</b> máx</div>
+        <div><span>Segovia</span><b>4°</b> mín · <b>12°</b> máx</div>
+        <div><span>Cielo</span>Bastantes nubes, con claros por la tarde. Sin lluvia</div>
       </div>
       <div class="routebox">
         <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
@@ -515,10 +515,10 @@
     <p class="sub">Ruta por la mañana con las maletas ya en el coche, y de ahí directos a Madrid. Amanece hacia las 8:25.</p>
     <div class="daywx">
       <div><span>San Rafael</span><b>3°</b> mín · <b>10°</b> máx</div>
-      <div><span>Cielo</span>Cubierto todo el día. Lluvia poco probable (20 % según AEMET); nieve solo por encima de 2.300 m</div>
+      <div><span>Cielo</span>Nuboso por la mañana, con posible niebla al amanecer. Lluvia poco probable (25 % según AEMET); nieve solo por encima de 2.200 m</div>
     </div>
     <div class="timeline" id="sun"></div>
-    <div class="note"><strong>Ojo con el tiempo.</strong> Hoy las previsiones dan un domingo cubierto y seco, sin nieve. Aun así, a primera hora puede haber escarcha o barro en la senda: calzado con buena suela y ropa de abrigo. Volvemos a mirar la previsión el sábado por la noche. Si el día sale feo, plan B: paseo por el pinar y el casco de El Espinar, a 5 minutos.
+    <div class="note"><strong>Ojo con el tiempo.</strong> Las previsiones del 27 de noviembre dan un domingo nuboso y seco, sin nieve, con posible niebla al amanecer. Aun así, a primera hora puede haber escarcha o barro en la senda: calzado con buena suela y ropa de abrigo. Volvemos a mirar la previsión el sábado por la noche. Si el día sale feo, plan B: paseo por el pinar y el casco de El Espinar, a 5 minutos.
       <div class="links"><a class="btn web" target="_blank" rel="noopener" href="https://www.aemet.es/es/eltiempo/prediccion/municipios/el-espinar-id40076"><span class="dot"></span>Previsión AEMET de El Espinar</a></div>
     </div>
   </section>
@@ -616,17 +616,17 @@ const ICONS = {
   mixto: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="9" r="3.4"/><path d="M9 2.5v1.6M2.5 9h1.6M4.4 4.4l1.1 1.1M13.6 4.4l-1.1 1.1"/><path d="M8.5 19.5h9a3.5 3.5 0 0 0 0-7 4.6 4.6 0 0 0-8.7 1.4A2.8 2.8 0 0 0 8.5 19.5z"/></svg>',
   nubes: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M7 18.5h10.5a4 4 0 0 0 0-8 5.5 5.5 0 0 0-10.4 1.6A3.2 3.2 0 0 0 7 18.5z"/></svg>'
 };
-const WX_A = {i:"mixto", t:10, w:7,  s:"Sol y algunas nubes", r:"Sin lluvia"};
-const WX_B = {i:"mixto", t:9,  w:4,  s:"Sol con nubes altas; se va cubriendo al atardecer", r:"Sin lluvia"};
-const WX_C = {i:"nubes", t:7,  w:3,  s:"Nublado", r:"Sin lluvia"};
-const WX_D = {i:"nubes", t:5,  w:3,  s:"Nublado", r:"Sin lluvia"};
-const WX_E = {i:"nubes", t:5,  w:3,  s:"Cubierto", r:"Sin lluvia"};
-const WX_F = {i:"nubes", t:6,  w:4,  s:"Cubierto, a 1.450 m", r:"Sin lluvia ni nieve"};
-const WX_G = {i:"nubes", t:8,  w:4,  s:"Cubierto", r:"Sin lluvia"};
-const WX_H = {i:"nubes", t:10, w:2,  s:"Cubierto, en Madrid", r:"Sin lluvia"};
-const WX_ESC = {i:"mixto", t:8, w:6, s:"Nubes y claros; se cubre al anochecer", r:"Sin lluvia"};
-const WX_SL = {i:"mixto", t:9, w:6, s:"Nubes y claros, en San Lorenzo", r:"Sin lluvia"};
-const WX_ROBLES = {i:"nubes", t:6, w:4, s:"Nublado, en Navacerrada", r:"Sin lluvia"};
+const WX_A = {i:"mixto", t:11, w:7,  s:"Sol entre nubes", r:"Sin lluvia"};
+const WX_B = {i:"mixto", t:10, w:5,  s:"Nubes y claros; se cubre al atardecer", r:"Sin lluvia"};
+const WX_C = {i:"nubes", t:8,  w:3,  s:"Nublado", r:"Sin lluvia"};
+const WX_D = {i:"nubes", t:6,  w:5,  s:"Nublado; posible niebla", r:"Sin lluvia"};
+const WX_E = {i:"nubes", t:4,  w:5,  s:"Cubierto; posible niebla", r:"Sin lluvia"};
+const WX_F = {i:"nubes", t:5,  w:7,  s:"Cubierto a 1.450 m; posible niebla al empezar", r:"Sin lluvia ni nieve"};
+const WX_G = {i:"mixto", t:8,  w:8,  s:"Nubes y claros", r:"Sin lluvia"};
+const WX_H = {i:"sol", t:11, w:3,  s:"Soleado, en Madrid", r:"Sin lluvia"};
+const WX_ESC = {i:"mixto", t:10, w:6, s:"Nubes y claros; se cubre al anochecer", r:"Sin lluvia"};
+const WX_SL = {i:"mixto", t:10, w:6, s:"Nubes altas, en San Lorenzo", r:"Sin lluvia"};
+const WX_ROBLES = {i:"nubes", t:6, w:7, s:"Nublado, en Navacerrada", r:"Sin lluvia"};
 const windTxt = w => w < 6 ? `casi en calma (${w} km/h)` : `flojo (${w} km/h)`;
 const wxHTML = x => `<div class="wx"><div class="wx-main"><span class="wx-i">${ICONS[x.i]}</span><span class="wx-t">${x.t} °C</span><span class="wx-s">${x.s}</span></div><div class="wx-sub">Viento ${windTxt(x.w)} · ${x.r}</div></div>`;
 
